@@ -2,7 +2,7 @@ export const personalInfo = {
     name: "Ayush Chauhan",
     location: "Chandigarh, IN",
     email: "mail@ayuch.dev",
-    phone: "+91 8448522434",
+    phone: "+91-84485-22434",
     links: {
         linkedin: "linkedin.com/in/bakayu",
         github: "github.com/bakayu",
@@ -39,29 +39,29 @@ export const experience = [
     }
 ];
 
+// Update your projects array to include thumbnails and URLs
 export const projects = [
     {
         title: "Gitx",
-        duration: "Mar. 2025 – Present",
-        tech: ["Python", "Textual", "GitPython", "MkDocs", "GH Actions"],
         description: "TUI git helper with interactive features",
+        // thumbnail: "gitx_thmb.png", // image path
+        url: "https://github.com/gitxtui/gitx", // GitHub or project URL
+        repoUrl: "https://github.com/gitxtui/gitx", // Repository URL 
+        // demoUrl: "https://demo.netlify.app", // Demo URL (optional)
+        tech: ["Python", "Textual", "GitPython", "MkDocs", "GH Actions"],
         details: [
-            "Developed a TUI git helper with Textual to help users understand git commands and use git in a more interactive way, via the terminal",
-            "Implemented GitPython APIs to interact with git repositories and perform various git operations",
-            "Used MkDocs to create a documentation website for the git helper",
-            "Used GitHub Actions to automate the deployment of the documentation website, build and publish the TUI application"
+            "A powerful Terminal User Interface (TUI) for Git that makes version control more accessible and efficient."
         ]
     },
     {
         title: "SadakAI",
-        duration: "Sep. 2024 – Feb 2025",
-        tech: ["Python", "Flask", "LangChain", "Docker", "Groq", "Qdrant"],
         description: "AI platform for personalized learning paths",
+        url: "https://github.com/Open-Source-Chandigarh/sadakAI",
+        repoUrl: "https://github.com/Open-Source-Chandigarh/sadakAI",
+        // demoUrl: "https://demo.netlify.app", // Demo URL (optional)
+        tech: ["Python", "Flask", "LangChain", "Docker", "Groq", "Qdrant"],
         details: [
-            "Developed an AI platform to help users find the best route to learn a new skill, using LangChain and Groq",
-            "Implemented a Flask API to interact with the AI platform and provide a user interface",
-            "Used Docker to containerize the application and deploy it on a cloud server",
-            "Used LangChain, Groq and Qdrant to create a retrieval augmented generation (RAG) system to provide personalized learning paths for users"
+            "sadakAI is an AI-Powered roadmap generator that tailors career growth plans for aspiring and experienced software developer."
         ]
     }
 ];
@@ -70,24 +70,27 @@ export const contributions = [
     {
         project: "Graphite",
         description: "A 2D vector graphics editor",
-        contribution: "Fixed minor bugs related to the path tool, extended functionality of the path tool such as angle locking and snapping to grid"
+        contribution: "Fixed minor bugs related to the path tool, extended functionality of the path tool such as angle locking and snapping to grid",
+        url: "https://github.com/GraphiteEditor/Graphite"
     },
     {
         project: "DevrAI",
         description: "An AI-powered dev-rel assistant",
-        contribution: "Collaborated with implementing the base architecture of the project"
+        contribution: "Collaborated with implementing the base architecture of the project",
+        url: "https://github.com/devrel-ai"
     },
     {
         project: "Pictopy",
         description: "An Image sorter that sorts photos based on face encodings",
-        contribution: "Added a feature to sort images based on an input taken from the user, uploaded or captured live through the webcam using OpenCV"
+        contribution: "Added a feature to sort images based on an input taken from the user, uploaded or captured live through the webcam using OpenCV",
+        url: "https://github.com/bakayu/pictopy"
     }
 ];
 
 export const skills = {
     languages: ["Python", "C", "SQL (Postgres)", "JavaScript", "HTML/CSS", "Go", "Rust"],
-    frameworks: ["React", "Node.js", "Flask", "Django", "FastAPI", "Textual", "LangChain", "MkDocs"],
-    tools: ["Git", "GitHub Actions", "Docker", "Azure", "VS Code", "NeoVim", "Linux CLI"]
+    frameworks: ["React", "Node.js", "Flask", "Django", "FastAPI", "LangChain", "MkDocs"],
+    tools: ["Git", "GH Actions", "Docker", "Azure", "VS Code", "NeoVim", "Linux CLI"]
 };
 
 export const accomplishments = [

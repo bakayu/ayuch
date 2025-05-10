@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,jsx}",
   ],
+  darkMode: "class",
   theme: {
     container: {
       center: true,
@@ -39,15 +40,17 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Vibrant accent colors
-        vibrant: {
-          blue: "#3B82F6",
-          purple: "#8B5CF6",
-          pink: "#EC4899",
-          orange: "#F97316",
-          green: "#10B981",
-          yellow: "#FBBF24",
-          teal: "#14b8a6",
+
+        // New modern color palette
+        modern: {
+          almond: "#EEE5DA",
+          charcoal: "#262424",
+          ivory: "#efe9e0",
+          teal: "#0F9E99",
+          tealLight: "#11b5af",
+          tealDark: "#0c8580",
+          gray: "#8c8884",
+          charcoalLight: "#3a3838",
         },
       },
       keyframes: {
@@ -71,6 +74,10 @@ export default {
           "0%": { transform: "translateX(20px)", opacity: 0 },
           "100%": { transform: "translateX(0)", opacity: 1 },
         },
+        "cursor-blink": {
+          "0%, 100%": { opacity: 1 },
+          "50%": { opacity: 0 },
+        }
       },
       animation: {
         "fade-up": "fade-up 0.5s ease-out",
@@ -78,6 +85,7 @@ export default {
         "pulse-gentle": "pulse-gentle 2s infinite",
         "bounce-gentle": "bounce-gentle 2s infinite",
         "slide-in-right": "slide-in-right 0.5s ease-out",
+        "cursor-blink": "cursor-blink 0.8s infinite",
       },
     },
   },

@@ -2,60 +2,79 @@ import { useState, useEffect } from "react";
 
 export function ThemeToggle() {
   const [theme, setTheme] = useState(() => {
-    if (typeof window !== "undefined") {
-      return localStorage.getItem("theme") || "light";
+    // Set dark theme as default, but still respect user's saved preference if exists
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+      return localStorage.getItem('theme');
     }
-    return "light";
+    
+    // Default to dark theme
+    return 'dark';
   });
 
   useEffect(() => {
+    // Update the HTML document class when theme changes
     const root = window.document.documentElement;
-    root.classList.remove("light", "dark");
+    const isDark = theme === 'dark';
+    
+    root.classList.remove(isDark ? 'light' : 'dark');
     root.classList.add(theme);
-    localStorage.setItem("theme", theme);
+    
+    // Save theme preference
+    localStorage.setItem('theme', theme);
   }, [theme]);
+
+  // Initial setup to ensure dark theme is applied on first load
+  useEffect(() => {
+    // Force dark theme on initial load
+    const root = window.document.documentElement;
+    root.classList.remove('light');
+    root.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+  }, []);
 
   return (
     <button
-      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className="inline-flex h-10 w-10 items-center justify-center rounded-md bg-background text-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
-      aria-label="Toggle theme"
+      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      className="p-2 rounded-full bg-muted/50 hover:bg-muted transition-colors"
+      aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
     >
-      {theme === "light" ? (
+      {theme === 'dark' ? (
+        // Sun icon (Gruvbox yellow in dark mode)
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
+          width="18"
+          height="18"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="currentColor"
+          stroke="#d8a657"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          <circle cx="12" cy="12" r="4"></circle>
-          <path d="M12 2v2"></path>
-          <path d="M12 20v2"></path>
-          <path d="M4.93 4.93l1.41 1.41"></path>
-          <path d="M17.66 17.66l1.41 1.41"></path>
-          <path d="M2 12h2"></path>
-          <path d="M20 12h2"></path>
-          <path d="M6.34 17.66l-1.41 1.41"></path>
-          <path d="M19.07 4.93l-1.41 1.41"></path>
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
         </svg>
       ) : (
+        // Moon icon (Gruvbox blue in light mode)
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
+          width="18"
+          height="18"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="currentColor"
+          stroke="#427b58"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
       )}
     </button>
