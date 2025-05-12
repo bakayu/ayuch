@@ -5,11 +5,11 @@ import { skills } from "../../data/portfolio-data";
 const techIcons = {
   // Languages
   "Python": <i className="devicon-python-plain colored"></i>,
+  "Go": <i className="devicon-go-plain colored"></i>,
   "C": <i className="devicon-c-plain colored"></i>,
   "SQL (Postgres)": <i className="devicon-postgresql-plain colored"></i>,
   "JavaScript": <i className="devicon-javascript-plain colored"></i>,
   "HTML/CSS": <i className="devicon-html5-plain colored"></i>,
-  "Go": <i className="devicon-go-plain colored"></i>,
   "Rust": <i className="devicon-rust-plain"></i>,
 
   // Frameworks

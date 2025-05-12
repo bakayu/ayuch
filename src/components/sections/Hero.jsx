@@ -31,11 +31,9 @@ export default function Hero() {
             </h2>
           </div>
           
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-lg">
-            I design and build <span className="text-primary font-medium">robust backend systems</span> and 
-            create <span className="text-primary font-medium">clean, efficient code</span> that solves 
-            real-world problems. Passionate about open source and continuous learning.
-          </p>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-lg text-justify">
+              I'm a student and <span className="text-primary font-medium">Software Engineer</span> passionate about <span className="text-primary font-medium">FOSS</span>, <span className="text-primary font-medium">Low-Level Systems</span>, and <span className="text-primary font-medium">DevOps</span>. Always exploring the depths of computational systems and open-source collaboration.
+            </p>
           
           <div className="flex flex-wrap gap-4">
             <Button 
