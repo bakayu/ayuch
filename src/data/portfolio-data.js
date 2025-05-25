@@ -88,7 +88,7 @@ export const contributions = [
 ];
 
 export const skills = {
-    languages: ["Python", "Go", "C", "SQL (Postgres)", "JavaScript", "HTML/CSS", "Rust"],
+    languages: ["Python", "Rust", "Go", "C", "SQL (Postgres)", "JavaScript", "HTML/CSS"],
     frameworks: ["React", "Node.js", "Flask", "Django", "FastAPI", "LangChain", "MkDocs"],
     tools: ["Git", "GH Actions", "Docker", "Azure", "VS Code", "NeoVim", "Linux CLI"]
 };
