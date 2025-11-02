@@ -1,0 +1,220 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+% Define cyan color
+\definecolor{mycyan}{RGB}{0,255,255}
+
+% Configure hyperref for black text with cyan border
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=false,
+    linkbordercolor=mycyan,
+    urlbordercolor=mycyan,
+    pdfborderstyle={/S/U/W 1}
+}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Ayush Chauhan} \\ \vspace{1pt}
+    \small New Delhi, IN $|$  Email: \href{mailto:mail@ayuch.dev}{mail@ayuch.dev} $|$  
+    Blog: \href{https://ayuch.dev/blog}{ayuch.dev/blog}
+    \\ \vspace{1pt} Contact: +91 8448522434 $|$ 
+    LinkedIn: \href{https://linkedin.com/in/ayuch}{linkedin.com/in/ayuch} $|$
+    GitHub: \href{https://github.com/bakayu}{github.com/bakayu}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Chitkara University}{Rajpura, Punjab}
+      {Bachelor of Engineering in Computer Science and Engineering; CGPA: 9.3}{Aug. 2024 -- Present}
+    \resumeSubheading
+      {DAV Model School}{Shalimar Bagh, Delhi}
+      {Central Board of Secondary Education, Grade 11 and 12}{July 2021 -- Apr. 2023}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Mentee - LF Decentralized Trust}{Jun. 2025 -- Present}
+      {LF Decentralized Trust}{Remote}
+      \resumeItemListStart
+        \resumeItem{Selected as a LFDT mentee for the "Designing and Implementing Trust Tasks" project through the LFX mentorship program}
+        \resumeItem{Focusing on designing open source implementations of Trust Tasks to run in the layer 3 of the ToIP stack}
+        \resumeItem{Working with Rust and Python and Trust Frameworks to build decentralized identity solutions}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Technical Lead}{Sep. 2025 -- Present}
+      {Open Source Chandigarh}{Chitkara University, Rajpura, Punjab}
+      \resumeItemListStart
+        \resumeItem{Leading the technical front of the core team of OSC, managing technical initiatives and mentoring team members}
+        \resumeItem{Architecting and overseeing development of community projects and technical workshops}
+        \resumeItem{Coordinating with cross-functional teams to organize workshops, speaker sessions and technical events}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Technical Team Member}{Sep. 2024 -- Sep. 2025}
+      {Open Source Chandigarh}{Chitkara University, Rajpura, Punjab}
+      \resumeItemListStart
+        \resumeItem{Collaborated with the Open Source Chandigarh team to promote FOSS and contribute to various projects during Hacktoberfest 2024}
+        \resumeItem{Conducted workshops on Git and GitHub for students, onboarding 100+ students to open source}
+        \resumeItem{Participated in the GitHub Innovation Rally, encouraging first-year students to explore open source}
+        \resumeItem{Helped organize TechAbhivyakti 3.0 Hackathon, a two-day frontend development competition}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Open Source Contributor}{Aug. 2024 -- Present}
+      {Open Source Contributor}{Remote}
+      \resumeItemListStart
+        \resumeItem{AActively and consistently contributed to multiple open-source projects for over a year, submitting fixes and feature requests}
+      \resumeItemListEnd
+        
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Gitx} $|$ \emph{Golang, Bubbletea, Charm Stack, Hugo, GitHub Actions} $|$ \href{https://github.com/gitxtui/gitx}{GitHub}}{Jul. 2025 -- Present}
+          \resumeItemListStart
+            \resumeItem{Developed a powerful Terminal User Interface (TUI) for Git with interactive features to make version control more accessible}
+            \resumeItem{Built with golang and the bubbletea framework from the charm stack, providing an intuitive interface for Git operations}
+            \resumeItem{Collaborated on implementing a persistent configuration system, allowing users to customize app settings via a \texttt{.toml} file in their \texttt{.config} directory}
+            \resumeItem{Implemented comprehensive documentation using Hugo with automated deployment}
+            \resumeItem{Set up CI/CD pipelines with GitHub Actions for automated testing and releases}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{http-server} $|$ \emph{Golang, net/http, encoding/json, httptest, gorilla/websocket} $|$ \href{https://github.com/bakayu/http-server-go}{GitHub}}{Aug. 2025}
+          \resumeItemListStart
+            \resumeItem{Built a web server from scratch using Go's standard \texttt{net/http} library}
+            \resumeItem{Created RESTful API endpoints to record player wins (\texttt{POST}) and retrieve scores (\texttt{GET})}
+            \resumeItem{Implemented a persistent storage solution by reading from and writing to a JSON file (\texttt{game.db.json})}
+            \resumeItem{Wrote unit and integration tests using the \texttt{httptest} package to validate server responses and logic}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, Rust, Go, Java, C, SQL (Postgres)} \\
+     \textbf{Frameworks}{: Django, FastAPI, Hugo, Gin, Bubbletea, Tauri, Textual} \\
+     \textbf{Developer Tools}{: Git, GitHub, GH-Actions, Docker, Azure, Linux, VS Code, NeoVim} \\
+     \textbf{Libraries}{: gorilla/websocket, tokio, OpenCV, pandas, NumPy}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
