@@ -1,0 +1,55 @@
+/* Custom styling to match your brand colors */
+:root {
+    --accent-color: #0F9E99;
+    /* tropical teal */
+    --text-color: #242424;
+    --bg-color: #E8E4D9;
+}
+
+a {
+    color: var(--accent-color);
+}
+
+a:hover {
+    color: #0d8580;
+    text-decoration: underline;
+}
+
+.content {
+    line-height: 1.8;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+code {
+    background-color: rgba(15, 158, 153, 0.1);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: 'Monaco', 'Courier New', monospace;
+}
+
+/* Improve list styling */
+ul {
+    list-style-type: disc;
+    padding-left: 1.5em;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+/* Link icons for external links */
+a[href^="http"]::after {
+    content: " ↗";
+    font-size: 0.8em;
+    vertical-align: super;
+}
+
+a[href^="mailto:"]::after {
+    content: "";
+}
