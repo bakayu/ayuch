@@ -1,7 +1,7 @@
 base_url = "https://ayuch.dev"
 title = "~/ayu.ch"
 description = "Ayu's personal blog about programming, technology, and life."
-author = "Ayush"
+author = "Ayush Chauhan"
 theme = "tabi"
 generate_feeds = true
 compile_sass = true
