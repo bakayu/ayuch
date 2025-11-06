@@ -6,10 +6,10 @@ date: 2025-11-02
 > *All that we have is that shout in the wind —*
 > *How we live. How we go.*
 > *And how we stand before we fall.*
->> *— Karnus Au Bellona*
+> *— Karnus Au Bellona*
 
 Hola Amigos! I'm Ayush, I go by bakayu and my friends call me Ayu. <br>
-Currently a student in the sophomore year, developer, foss lover and a casual F1 fan.
+Currently a student in the sophomore year, developer, foss lover and a casual motorsport fan. I love playing games and reading books in my free time.
 
 I love reading fiction novels, some of my all time favorites are - Red Rising, Mistborn, Shadow Slave, The Beginning After The End and The Lord of Mysteries. (I want to read more of Sanderson's books when I get the time)
 
