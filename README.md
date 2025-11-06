@@ -1,3 +1,3 @@
 # Portfolio
 
-This is a simple portfolio made with hugo.
+This is a simple portfolio and blogging website made with zola and tabi.
