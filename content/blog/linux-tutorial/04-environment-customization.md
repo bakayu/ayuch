@@ -8,7 +8,7 @@ description = "Learn to customize your shell with environment variables, aliases
 tags = ["linux", "workshop", "tutorial", "command-line", "bash"]
 
 [extra]
-series = "Linux Command-Line Workshop"
+series = "Linux Command-Line Tutorial"
 series_part = 4
 toc = true
 quick_navigation_buttons = true
@@ -17,9 +17,9 @@ giscus = true
 
 ## Navigation
 
-**Continue to Part 5:** [The Final Challenge - Putting It All Together](/blog/linux-workshop/05-final-challenge)
+**Continue to Part 5:** [The Final Challenge - Putting It All Together](/blog/linux-tutorial/05-final-challenge)
 
-**Back to Part 3:** [Permissions & Processes - System Control](/blog/linux-workshop/03-permissions-processes)
+**Back to Part 3:** [Permissions & Processes - System Control](/blog/linux-tutorial/03-permissions-processes)
 
 ---
 
@@ -629,8 +629,8 @@ which command                    # Find command location
 
 ## Next Part
 
-**Continue to Part 5:** [The Final Challenge - Putting It All Together](/blog/linux-workshop/05-final-challenge)
+**Continue to Part 5:** [The Final Challenge - Putting It All Together](/blog/linux-tutorial/05-final-challenge)
 
 ## Previous Part
 
-**Back to Part 3:** [Permissions & Processes - System Control](/blog/linux-workshop/03-permissions-processes)
+**Back to Part 3:** [Permissions & Processes - System Control](/blog/linux-tutorial/03-permissions-processes)

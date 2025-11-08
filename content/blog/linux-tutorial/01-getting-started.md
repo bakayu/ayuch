@@ -8,23 +8,30 @@ description = "Learn essential navigation and file operation commands in the Lin
 tags = ["linux", "workshop", "tutorial", "command-line"]
 
 [extra]
-series = "Linux Command-Line Workshop"
+series = "Linux Command-Line Tutorial"
 series_part = 1
 toc = true
 quick_navigation_buttons = true
 giscus = true
-# social_media_card = "images/linux-workshop/card1.jpg"
+# social_media_card = "images/linux-tutorial/card1.jpg"
 +++
 
 ## Navigation
 
-**Continue to Part 2:** [Reading & Searching - Master Text Processing](/blog/linux-workshop/02-reading-searching)
+**Continue to Part 2:** [Reading & Searching - Master Text Processing](/blog/linux-tutorial/02-reading-searching)
 
-**Back to Index:** [Linux Wokrshop](/blog/linux-workshop)
+**Back to Part 0:** [Setting Up Your Environment](/blog/linux-tutorial/00-setup)
+
+**Back to Index:** [Linux Workshop](/blog/linux-tutorial)
 
 ---
 
-Welcome to Part 1 of the Linux Command-Line Workshop! In this post, you'll learn the fundamental commands that every developer needs to navigate and manipulate files in the terminal.
+Welcome to Part 1 of the Linux Command-Line Workshop!
+
+{{admonition(type="warning", text="**Haven't set up your environment yet?** Go back to [Part 0: Setting Up Your Environment](/blog/linux-tutorial/00-setup) first!
+")}}
+
+In this post, you'll learn the fundamental commands that every developer needs to navigate and manipulate files in the terminal.
 
 ## The Anatomy of a Command
 
@@ -387,8 +394,8 @@ command --help   # Quick help
 
 ## Next Part
 
-**Continue to Part 2:** [Reading & Searching - Master Text Processing](/blog/linux-workshop/02-reading-searching)
+**Continue to Part 2:** [Reading & Searching - Master Text Processing](/blog/linux-tutorial/02-reading-searching)
 
 ## Previous Part
 
-**Back to Index:** [Linux Wokrshop](/blog/linux-workshop)
+**Back to Index:** [Linux Wokrshop](/blog/linux-tutorial)

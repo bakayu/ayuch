@@ -9,8 +9,6 @@ page_template = "page.html"
 series = true
 +++
 
-> *"A moving mind is always fed. At rest, mine eats itself." -- Darrow of Lykos*
-
 Welcome to the **Linux Command-Line for Developers** workshop series! This hands-on series will take you from terminal newcomer to confident command-line user.
 
 ## What You'll Learn
@@ -31,11 +29,11 @@ By the end of this series, you'll be comfortable with:
 
 ## Workshop Repository
 
-All exercises and examples are available in the [workshop repository](https://github.com/bakayu/linux-workshop).
+All exercises and examples are available in the [workshop repository](https://github.com/bakayu/linux-tutorial).
 
 ```bash
-git clone https://github.com/bakayu/linux-workshop
-cd linux-workshop
+git clone https://github.com/bakayu/linux-tutorial
+cd linux-tutorial
 ```
 
 ## Series Structure

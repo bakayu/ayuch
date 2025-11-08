@@ -8,7 +8,7 @@ description = "Learn to view, search, and process text files using the Linux com
 tags = ["linux", "workshop", "tutorial", "command-line"]
 
 [extra]
-series = "Linux Command-Line Workshop"
+series = "Linux Command-Line Tutorial"
 series_part = 2
 toc = true
 quick_navigation_buttons = true
@@ -17,9 +17,9 @@ giscus = true
 
 ## Navigation
 
-**Continue to Part 3:** [Permissions & Processes - System Control](/blog/linux-workshop/03-permissions-processes)
+**Continue to Part 3:** [Permissions & Processes - System Control](/blog/linux-tutorial/03-permissions-processes)
 
-**Back to Part 1:** [Getting Started - Your First Commands](/blog/linux-workshop/01-getting-started)
+**Back to Part 1:** [Getting Started - Your First Commands](/blog/linux-tutorial/01-getting-started)
 
 ---
 
@@ -39,6 +39,7 @@ cat file1.txt file2.txt > combined.txt  # Combine files
 ```
 
 **Exercise 2.1**:
+
 ```bash
 cd ~/workshop-practice
 echo "Hello, Linux!" > greeting.txt
@@ -58,6 +59,7 @@ less large_file.txt
 ```
 
 **Navigation inside `less`**:
+
 - `SPACE` or `f` - Next page
 - `b` - Previous page
 - `/searchterm` - Search forward
@@ -69,6 +71,7 @@ less large_file.txt
 - `q` - Quit
 
 **Exercise 2.2**:
+
 ```bash
 # Create a large file
 seq 1 1000 > numbers.txt
@@ -90,6 +93,7 @@ head -5 file.txt        # First 5 lines
 ```
 
 **Exercise 2.3**:
+
 ```bash
 head -20 numbers.txt
 head -3 numbers.txt
@@ -108,6 +112,7 @@ tail -f logfile.log     # Follow mode (live updates!)
 ```
 
 **Exercise 2.4**:
+
 ```bash
 tail -20 numbers.txt
 tail -5 numbers.txt
@@ -129,6 +134,7 @@ wc -c file.txt          # Just character count
 ```
 
 **Exercise 2.5**:
+
 ```bash
 wc numbers.txt
 wc -l numbers.txt
@@ -144,12 +150,14 @@ echo "Hello World" | wc -w
 **The most powerful search tool.** Find lines matching a pattern.
 
 **Basic usage**:
+
 ```bash
 grep "search_term" file.txt
 grep "error" /var/log/syslog
 ```
 
 **Important flags**:
+
 ```bash
 grep -i "error" file.txt        # Case-insensitive
 grep -n "error" file.txt        # Show line numbers
@@ -162,6 +170,7 @@ grep -C 3 "error" file.txt      # Show 3 lines of Context
 ```
 
 **Exercise 2.6**:
+
 ```bash
 cd ~/workshop-practice
 
@@ -203,6 +212,7 @@ find . -mtime -7                # Modified in last 7 days
 ```
 
 **Exercise 2.7**:
+
 ```bash
 cd ~/workshop-practice
 
@@ -219,6 +229,7 @@ find . -name "*test*"
 ```
 
 **Combining find + grep**:
+
 ```bash
 find . -name "*.py" -exec grep "TODO" {} \;
 # Translation: Find all .py files and search for "TODO" in them
@@ -251,6 +262,7 @@ grep "ERROR" app.log | cut -d' ' -f5- | sort | uniq
 ```
 
 **Exercise 2.8**:
+
 ```bash
 cd ~/workshop-practice
 
@@ -278,6 +290,7 @@ command &> all.log      # Redirect stdout AND stderr
 ```
 
 **Exercise 2.9**:
+
 ```bash
 cd ~/workshop-practice
 
@@ -316,6 +329,7 @@ sort -k2 file.txt           # Sort by 2nd column
 ```
 
 **Exercise 2.10**:
+
 ```bash
 cat > fruits.txt << EOF
 banana
@@ -343,6 +357,7 @@ sort file.txt | uniq -d     # Show only duplicates
 ```
 
 **Exercise 2.11**:
+
 ```bash
 sort fruits.txt | uniq
 sort fruits.txt | uniq -c
@@ -359,6 +374,7 @@ cut -c1-10 file.txt         # Extract characters 1-10
 ```
 
 **Exercise 2.12**:
+
 ```bash
 cat > data.csv << EOF
 John,25,Engineer
@@ -381,6 +397,7 @@ tr -s ' '                   # Squeeze repeated spaces
 ```
 
 **Exercise 2.13**:
+
 ```bash
 echo "hello world" | tr 'a-z' 'A-Z'
 echo "hello    world" | tr -s ' '
@@ -394,6 +411,7 @@ echo "hello world 123" | tr -d '0-9'
 You have a web server log. Extract useful information!
 
 **Setup**:
+
 ```bash
 cd ~/workshop-practice
 cat > server.log << EOF
@@ -408,6 +426,7 @@ EOF
 ```
 
 **Your Tasks**:
+
 1. How many requests returned 404?
 2. Which IP addresses made requests?
 3. How many unique IP addresses?
@@ -446,6 +465,7 @@ cut -d' ' -f1 server.log | sort | uniq -c | sort -rn | head -1
 Find all TODO comments in a project and create a report.
 
 **Setup**:
+
 ```bash
 cd ~/workshop-practice
 mkdir -p project/{src,tests,docs}
@@ -472,6 +492,7 @@ EOF
 ```
 
 **Your Tasks**:
+
 1. Find all files containing "TODO"
 2. Count total number of TODO comments
 3. Create a `todos.txt` file with all TODO lines and their file names
@@ -537,8 +558,8 @@ cmd < file              # Input from file
 
 ## Next Part
 
-**Continue to Part 3:** [Permissions & Processes - System Control](/blog/linux-workshop/03-permissions-processes)
+**Continue to Part 3:** [Permissions & Processes - System Control](/blog/linux-tutorial/03-permissions-processes)
 
 ## Previous Part
 
-**Back to Part 1:** [Getting Started - Your First Commands](/blog/linux-workshop/01-getting-started)
+**Back to Part 1:** [Getting Started - Your First Commands](/blog/linux-tutorial/01-getting-started)

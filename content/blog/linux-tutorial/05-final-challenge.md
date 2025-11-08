@@ -8,7 +8,7 @@ description = "Master real-world scenarios and complete comprehensive challenges
 tags = ["linux", "workshop", "tutorial", "command-line", "challenge"]
 
 [extra]
-series = "Linux Command-Line Workshop"
+series = "Linux Command-Line Tutorial"
 series_part = 5
 toc = true
 quick_navigation_buttons = true
@@ -17,9 +17,9 @@ giscus = true
 
 ## Navigation
 
-**Back to Part 4:** [Environment Mastery - Customizing Your Shell](/blog/linux-workshop/04-environment-customization)
+**Back to Part 4:** [Environment Mastery - Customizing Your Shell](/blog/linux-tutorial/04-environment-customization)
 
-**Back to Series Index:** [Linux Command-Line Workshop Series](/blog/linux-workshop/)
+**Back to Series Index:** [Linux Command-Line Workshop Series](/blog/linux-tutorial/)
 
 ---
 
@@ -746,8 +746,8 @@ Thank you for joining this workshop. Now go build something awesome! 🚀
 
 ## Previous Part
 
-**Back to Part 4:** [Environment Mastery - Customizing Your Shell](/blog/linux-workshop/04-environment-customization)
+**Back to Part 4:** [Environment Mastery - Customizing Your Shell](/blog/linux-tutorial/04-environment-customization)
 
 ## Series Index
 
-**Back to Series Index:** [Linux Command-Line Workshop Series](/blog/linux-workshop/)
+**Back to Series Index:** [Linux Command-Line Workshop Series](/blog/linux-tutorial/)

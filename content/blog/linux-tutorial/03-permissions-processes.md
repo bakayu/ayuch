@@ -8,7 +8,7 @@ description = "Master file permissions, ownership, and process management on Lin
 tags = ["linux", "workshop", "tutorial", "command-line"]
 
 [extra]
-series = "Linux Command-Line Workshop"
+series = "Linux Command-Line Tutorial"
 series_part = 3
 toc = true
 quick_navigation_buttons = true
@@ -17,9 +17,9 @@ giscus = true
 
 ## Navigation
 
-**Continue to Part 4:** [Environment Mastery - Customizing Your Shell](/blog/linux-workshop/04-environment-customization)
+**Continue to Part 4:** [Environment Mastery - Customizing Your Shell](/blog/linux-tutorial/04-environment-customization)
 
-**Back to Part 2:** [Reading & Searching - Master Text Processing](/blog/linux-workshop/02-reading-searching)
+**Back to Part 2:** [Reading & Searching - Master Text Processing](/blog/linux-tutorial/02-reading-searching)
 
 ---
 
@@ -527,8 +527,8 @@ uname -a                # System info
 
 ## Next Part
 
-**Continue to Part 4:** [Environment Mastery - Customizing Your Shell](/blog/linux-workshop/04-environment-customization)
+**Continue to Part 4:** [Environment Mastery - Customizing Your Shell](/blog/linux-tutorial/04-environment-customization)
 
 ## Previous Part
 
-**Back to Part 2:** [Reading & Searching - Master Text Processing](/blog/linux-workshop/02-reading-searching)
+**Back to Part 2:** [Reading & Searching - Master Text Processing](/blog/linux-tutorial/02-reading-searching)
