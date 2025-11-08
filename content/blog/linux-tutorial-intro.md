@@ -9,7 +9,10 @@ tags = ["linux", "workshop", "announcement"]
 [extra]
 featured = true
 giscus = true
+social_media_card = "/images/linux-tutorial/linux-tutorial.jpg"
 +++
+
+![Linux Command Line Workshop Banner](/images/linux-tutorial/linux-tutorial.jpg)
 
 > *"The oldest and strongest emotion of mankind is fear, and the oldest and strongest fear is the fear of the unknown." -- Howard Phillips Lovecraft*
 
