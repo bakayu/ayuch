@@ -7,4 +7,6 @@ description = "Say Hello!"
 giscus = true
 +++
 
+> *"We are what we pretend to be, so we must be careful about what we pretend to be" -- from Mother Night.*
+
 Say hello everyone!

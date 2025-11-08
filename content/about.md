@@ -3,9 +3,9 @@ title: "About"
 date: 2025-11-02
 ---
 
-> *All that we have is that shout in the wind —*
+> *"All that we have is that shout in the wind —*
 > *How we live. How we go.*
-> *And how we stand before we fall.*
+> *And how we stand before we fall."*
 > *— Karnus Au Bellona*
 
 Hola Amigos! I'm Ayush, I go by bakayu and my friends call me Ayu. <br>
