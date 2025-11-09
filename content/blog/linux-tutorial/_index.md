@@ -52,4 +52,4 @@ cd linux-tutorial
 
 This series follows a progressive learning path. Each post builds on the previous one, so I recommend following them in order.
 
-Let's begin!
+Let's begin! - [Part 0: Setting Up Your Environment](/blog/linux-tutorial/00-setup)
