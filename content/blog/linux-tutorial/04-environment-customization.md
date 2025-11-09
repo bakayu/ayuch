@@ -383,7 +383,7 @@ Let's make it run every time you open a terminal!
 nano ~/.bashrc
 
 # Add at the end:
-alias fetch='berzifetch'
+alias fetch='~/berzifetch/main'
 
 # OR make it auto-run on terminal startup:
 berzifetch
