@@ -96,7 +96,7 @@ sudo apt install neofetch -y
 neofetch
 ```
 
-You should see a beautiful display of your system information! 🎉
+You should see a beautiful display of your system information!
 
 ### Accessing WSL
 
@@ -282,7 +282,7 @@ which curl
 which vim
 ```
 
-If all these commands work, you're ready to go! 🚀
+If all these commands work, you're ready to go!
 
 ---
 
