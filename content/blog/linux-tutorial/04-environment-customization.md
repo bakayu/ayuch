@@ -386,13 +386,13 @@ nano ~/.bashrc
 alias fetch='~/berzifetch/main'
 
 # OR make it auto-run on terminal startup:
-berzifetch
+~/berzifetch/main
 
 # Save and reload
 source ~/.bashrc
 ```
 
-Now every new terminal shows your system info! 🎉
+Now every new terminal shows your system info!
 
 ---
 
@@ -401,6 +401,7 @@ Now every new terminal shows your system info! 🎉
 Functions are like aliases on steroids - they can accept arguments!
 
 **Exercise 4.12** - Add these functions to `.bashrc`:
+
 ```bash
 # Create a directory and enter it
 mkcd() {
@@ -434,6 +435,7 @@ psgrep() {
 ```
 
 **Usage**:
+
 ```bash
 source ~/.bashrc
 
