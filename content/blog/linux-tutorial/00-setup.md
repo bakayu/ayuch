@@ -28,6 +28,8 @@ WSL lets you run a full Linux environment directly on Windows. It's the best way
 
 ### Step 1: Enable WSL
 
+{{ admonition(type="info", text="WSL Ubuntu can be installed via the Microsoft store as well, but installing it via powershell is recommended.") }}
+
 Open **PowerShell** as Administrator (Right-click Start → Windows PowerShell (Admin)) and run:
 
 ```powershell
@@ -117,12 +119,29 @@ Open **Terminal** (⌘+Space, type "Terminal") and run:
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-Follow the on-screen instructions. When complete, run:
+Follow the on-screen instructions. After installation completes, **read the "Next steps" section carefully**—it will tell you the exact commands to run.
+
+**For Apple Silicon Macs (M1-M4)**, run:
 
 ```bash
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
+
+**For Intel Macs**, run:
+
+```bash
+echo 'eval "$(/usr/local/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/usr/local/bin/brew shellenv)"
+```
+
+{{ admonition(type="tip", text="Not sure which Mac you have?
+
+Click the Apple Menu → About This Mac.
+
+If it says 'Chip: Apple M1/M2/M3/M4', you have Apple Silicon. If it says 'Processor: Intel', you have an Intel Mac.") }}
+
+Close and reopen Terminal for changes to take effect.
 
 ### Step 2: Verify Installation
 
