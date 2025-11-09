@@ -1,7 +1,7 @@
 +++
 title = "Part 1: Getting Started - Your First Commands"
-date = 2025-11-07
-weight = 1
+date = 2025-11-09
+weight = 4
 description = "Learn essential navigation and file operation commands in the Linux terminal"
 
 [taxonomies]
@@ -13,16 +13,20 @@ series_part = 1
 toc = true
 quick_navigation_buttons = true
 giscus = true
+show_previous_next_article_links = true
+invert_previous_next_article_links = true
 # social_media_card = "images/linux-tutorial/card1.jpg"
 +++
 
 ## Navigation
 
-**Continue to Part 2:** [Reading & Searching - Master Text Processing](/blog/linux-tutorial/02-reading-searching)
-
-**Back to Part 0:** [Setting Up Your Environment](/blog/linux-tutorial/00-setup)
-
-**Back to Index:** [Linux Workshop](/blog/linux-tutorial)
+0. [Tutorial Index](/blog/linux-tutorial)
+1. [Part-00 : Setup](/blog/linux-tutorial/00-setup)
+2. [Part-01 : Getting Started](/blog/linux-tutorial/01-getting-started) ◄ You are here
+3. [Part-02 : Reading and Searching](/blog/linux-tutorial/02-reading-searching)
+4. [Part-03 : Permissions and Processes](/blog/linux-tutorial/03-permissions-processes)
+5. [Part-04 : Environment Customization](/blog/linux-tutorial/04-environment-customization)
+6. [Part-05 : Solutions and Next Steps](/blog/linux-tutorial/05-solutions)
 
 ---
 
@@ -269,84 +273,28 @@ cp --help
 
 ---
 
-## Capstone Exercise 1: Build a Project Structure
+## Hands-On Challenge
 
-Create this exact directory structure using only command-line tools:
+Ready to practice? Complete the hands-on challenge in the workshop repository:
 
-```sh
-~/workshop-project/
-├── src/
-│   ├── main.py
-│   └── utils.py
-├── tests/
-│   └── test_main.py
-├── docs/
-│   └── README.md
-└── config.json
-```
+**[Part 1 Challenge on GitHub](https://github.com/bakayu/linux-tutorial/tree/master/01-getting-started)**
 
-**Solution Steps** (try on your own first!):
+**Challenge**: Build a complete web project structure using only the commands you learned.
 
-<details>
-<summary>Click to reveal solution</summary>
+The challenge includes:
+
+- Exact requirements for the directory structure
+- Verification script to check your work
+- Progressive hints if you get stuck
+- Time goal to challenge yourself
+
+Clone the repository and give it a try:
 
 ```bash
-# Create root directory
-cd ~
-mkdir workshop-project
-cd workshop-project
-
-# Create subdirectories
-mkdir src tests docs
-
-# Create files
-touch src/main.py src/utils.py
-touch tests/test_main.py
-touch docs/README.md
-touch config.json
-
-# Verify
-ls -R
+git clone https://github.com/bakayu/linux-tutorial.git
+cd linux-tutorial/01-getting-started
+cat README.md
 ```
-
-</details>
-
----
-
-## Capstone Exercise 2: File Organization
-
-You have messy files in `~/Downloads/`. Organize them:
-
-**Setup**:
-
-```bash
-mkdir -p ~/Downloads/messy
-cd ~/Downloads/messy
-touch report.pdf image1.jpg image2.png video.mp4 script.js style.css data.csv notes.txt
-```
-
-**Your Task**: Create `documents/`, `images/`, `code/`, `data/` folders and move files to appropriate locations.
-
-<details>
-<summary>Click to reveal solution</summary>
-
-```bash
-cd ~/Downloads/messy
-
-# Create organization folders
-mkdir documents images code data
-
-# Move files
-mv *.pdf *.txt documents/
-mv *.jpg *.png images/
-mv *.js *.css code/
-mv *.csv *.mp4 data/
-
-# Verify
-ls -R
-```
-
-</details>
 
 ---
 
@@ -362,7 +310,7 @@ These are the foundation of everything you'll do in the terminal!
 
 ## Next Steps
 
-In [Part 2: Reading & Searching](./02-reading-searching.md), we'll learn how to:
+In [Part 2: Reading & Searching](/blog/linux-tutorial/02-reading-searching), we'll learn how to:
 
 - View file contents (`cat`, `less`, `head`, `tail`)
 - Search for text (`grep`)
@@ -389,13 +337,3 @@ rm -i file.txt          # Delete (careful!)
 man command      # Full manual
 command --help   # Quick help
 ```
-
----
-
-## Next Part
-
-**Continue to Part 2:** [Reading & Searching - Master Text Processing](/blog/linux-tutorial/02-reading-searching)
-
-## Previous Part
-
-**Back to Index:** [Linux Wokrshop](/blog/linux-tutorial)

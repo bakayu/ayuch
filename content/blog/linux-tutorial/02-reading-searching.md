@@ -1,7 +1,7 @@
 +++
 title = "Part 2: Reading & Searching - Master Text Processing"
-date = 2025-11-08
-weight = 2
+date = 2025-11-09
+weight = 3
 description = "Learn to view, search, and process text files using the Linux command line"
 
 [taxonomies]
@@ -12,14 +12,20 @@ series = "Linux Command-Line Tutorial"
 series_part = 2
 toc = true
 quick_navigation_buttons = true
+show_previous_next_article_links = true
+invert_previous_next_article_links = true
 giscus = true
 +++
 
 ## Navigation
 
-**Continue to Part 3:** [Permissions & Processes - System Control](/blog/linux-tutorial/03-permissions-processes)
-
-**Back to Part 1:** [Getting Started - Your First Commands](/blog/linux-tutorial/01-getting-started)
+0. [Tutorial Index](/blog/linux-tutorial)
+1. [Part-00 : Setup](/blog/linux-tutorial/00-setup)
+2. [Part-01 : Getting Started](/blog/linux-tutorial/01-getting-started)
+3. [Part-02 : Reading and Searching](/blog/linux-tutorial/02-reading-searching) ◄ You are here
+4. [Part-03 : Permissions and Processes](/blog/linux-tutorial/03-permissions-processes)
+5. [Part-04 : Environment Customization](/blog/linux-tutorial/04-environment-customization)
+6. [Part-05 : Solutions and Next Steps](/blog/linux-tutorial/05-solutions)
 
 ---
 
@@ -406,120 +412,29 @@ echo "hello world 123" | tr -d '0-9'
 
 ---
 
-## Capstone Exercise 1: Log Analysis
+## Hands-On Challenge
 
-You have a web server log. Extract useful information!
+Ready to practice? Complete the hands-on challenge in the workshop repository:
 
-**Setup**:
+**[Part 2 Challenge on GitHub](https://github.com/bakayu/linux-tutorial/tree/master/02-reading-searching)**
 
-```bash
-cd ~/workshop-practice
-cat > server.log << EOF
-192.168.1.1 - - [15/Jan/2024:10:15:23] "GET /home HTTP/1.1" 200 1234
-192.168.1.2 - - [15/Jan/2024:10:15:45] "GET /api/users HTTP/1.1" 404 567
-192.168.1.1 - - [15/Jan/2024:10:16:12] "POST /login HTTP/1.1" 200 890
-192.168.1.3 - - [15/Jan/2024:10:16:34] "GET /home HTTP/1.1" 200 1234
-192.168.1.2 - - [15/Jan/2024:10:17:01] "GET /api/posts HTTP/1.1" 500 234
-192.168.1.4 - - [15/Jan/2024:10:17:23] "GET /about HTTP/1.1" 200 678
-192.168.1.1 - - [15/Jan/2024:10:18:45] "GET /api/users HTTP/1.1" 404 567
-EOF
-```
+**Challenge**: Analyze real web server logs to extract insights using grep, pipes, and text processing tools.
 
-**Your Tasks**:
+The challenge includes:
 
-1. How many requests returned 404?
-2. Which IP addresses made requests?
-3. How many unique IP addresses?
-4. Show only the successful requests (status 200)
-5. What are the unique URLs requested?
+- Realistic sample log data
+- 5 analysis questions to answer
+- Verification script to check your solutions
+- Progressive hints for each question
 
-<details>
-<summary>Click to reveal solutions</summary>
+Clone the repository and give it a try:
 
 ```bash
-# 1. Count 404 errors
-grep "404" server.log | wc -l
-
-# 2. Extract all IP addresses
-cut -d' ' -f1 server.log
-
-# 3. Count unique IPs
-cut -d' ' -f1 server.log | sort | uniq | wc -l
-
-# 4. Show successful requests
-grep "200" server.log
-
-# 5. Extract unique URLs
-grep -o '"GET [^"]*' server.log | cut -d' ' -f2 | sort | uniq
-
-# Bonus: Which IP made the most requests?
-cut -d' ' -f1 server.log | sort | uniq -c | sort -rn | head -1
+git clone https://github.com/bakayu/linux-tutorial.git
+cd linux-tutorial/02-reading-searching
+./setup.sh
+cat README.md
 ```
-
-</details>
-
----
-
-## Capstone Exercise 2: Code Analysis
-
-Find all TODO comments in a project and create a report.
-
-**Setup**:
-
-```bash
-cd ~/workshop-practice
-mkdir -p project/{src,tests,docs}
-
-cat > project/src/app.py << EOF
-def main():
-    # TODO: Add error handling
-    print("Hello")
-    # FIXME: This is slow
-    return True
-EOF
-
-cat > project/src/utils.py << EOF
-# TODO: Document this function
-def helper():
-    pass
-EOF
-
-cat > project/tests/test_app.py << EOF
-# TODO: Add more test cases
-def test_main():
-    assert True
-EOF
-```
-
-**Your Tasks**:
-
-1. Find all files containing "TODO"
-2. Count total number of TODO comments
-3. Create a `todos.txt` file with all TODO lines and their file names
-4. Which file has the most TODOs?
-
-<details>
-<summary>Click to reveal solutions</summary>
-
-```bash
-# 1. Find files with TODO
-grep -r "TODO" project/
-
-# 2. Count TODOs
-grep -r "TODO" project/ | wc -l
-
-# 3. Create report with filenames
-grep -rn "TODO" project/ > todos.txt
-cat todos.txt
-
-# 4. File with most TODOs
-grep -r "TODO" project/ | cut -d':' -f1 | sort | uniq -c | sort -rn | head -1
-
-# Bonus: Pretty format
-grep -rn "TODO" project/ | sed 's/:/ (line /' | sed 's/:/) /'
-```
-
-</details>
 
 ---
 
@@ -553,13 +468,3 @@ cmd > file              # Write to file
 cmd >> file             # Append to file
 cmd < file              # Input from file
 ```
-
----
-
-## Next Part
-
-**Continue to Part 3:** [Permissions & Processes - System Control](/blog/linux-tutorial/03-permissions-processes)
-
-## Previous Part
-
-**Back to Part 1:** [Getting Started - Your First Commands](/blog/linux-tutorial/01-getting-started)

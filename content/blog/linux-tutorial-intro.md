@@ -1,6 +1,6 @@
 +++
 title = "New Workshop Series: Linux Command-Line for Developers"
-date = 2025-11-07
+date = 2025-11-08
 description = "A comprehensive hands-on workshop series on the Linux command line"
 
 [taxonomies]

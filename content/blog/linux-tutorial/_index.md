@@ -9,7 +9,19 @@ page_template = "page.html"
 series = true
 +++
 
+## Navigation
+
+0. [Tutorial Index](/blog/linux-tutorial) ◄ You are here
+1. [Part-00 : Setup](/blog/linux-tutorial/00-setup)
+2. [Part-01 : Getting Started](/blog/linux-tutorial/01-getting-started)
+3. [Part-02 : Reading and Searching](/blog/linux-tutorial/02-reading-searching)
+4. [Part-03 : Permissions and Processes](/blog/linux-tutorial/03-permissions-processes)
+5. [Part-04 : Environment Customization](/blog/linux-tutorial/04-environment-customization)
+6. [Part-05 : The Final Challenge](/blog/linux-tutorial/05-final-challenge)
+
 Welcome to the **Linux Command-Line for Developers** workshop series! This hands-on series will take you from terminal newcomer to confident command-line user.
+
+...
 
 ## What You'll Learn
 

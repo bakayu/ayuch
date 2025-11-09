@@ -1,7 +1,7 @@
 +++
 title = "Part 4: Environment Mastery - Customizing Your Shell"
-date = 2025-11-10
-weight = 4
+date = 2025-11-09
+weight = 1
 description = "Learn to customize your shell with environment variables, aliases, and the .bashrc file"
 
 [taxonomies]
@@ -12,14 +12,20 @@ series = "Linux Command-Line Tutorial"
 series_part = 4
 toc = true
 quick_navigation_buttons = true
+show_previous_next_article_links = true
+invert_previous_next_article_links = true
 giscus = true
 +++
 
 ## Navigation
 
-**Continue to Part 5:** [The Final Challenge - Putting It All Together](/blog/linux-tutorial/05-final-challenge)
-
-**Back to Part 3:** [Permissions & Processes - System Control](/blog/linux-tutorial/03-permissions-processes)
+0. [Tutorial Index](/blog/linux-tutorial)
+1. [Part-00 : Setup](/blog/linux-tutorial/00-setup)
+2. [Part-01 : Getting Started](/blog/linux-tutorial/01-getting-started)
+3. [Part-02 : Reading and Searching](/blog/linux-tutorial/02-reading-searching)
+4. [Part-03 : Permissions and Processes](/blog/linux-tutorial/03-permissions-processes)
+5. [Part-04 : Environment Customization](/blog/linux-tutorial/04-environment-customization) ◄ You are here
+6. [Part-05 : Solutions and Next Steps](/blog/linux-tutorial/05-solutions)
 
 ---
 
@@ -311,6 +317,7 @@ PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "  # Color
 ```
 
 **Make it permanent** - add to `.bashrc`:
+
 ```bash
 # Colorful prompt (green user@host, blue directory)
 PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "
@@ -326,69 +333,52 @@ Now let's do something cool! We'll install and configure **berzifetch** - a syst
 
 berzifetch displays your system information in a beautiful format. Think of it like `neofetch` but customizable!
 
-**Repository**: https://github.com/Spirizeon/berzifetch
+**Repository**: [github.com/Spirizeon/berzifetch](https://github.com/Spirizeon/berzifetch)
 
 ---
 
 ### Installing berzifetch
 
 **Exercise 4.9**:
+
 ```bash
 # Clone the repository
-cd ~/Downloads
+cd
 git clone https://github.com/Spirizeon/berzifetch.git
 cd berzifetch
 
 # Read the README
 cat README.md
 
-# Make it executable
-chmod +x berzifetch
-
 # Try it
-./berzifetch
+./main
 ```
 
 ---
 
 ### Adding berzifetch to Your PATH
 
-Option 1: **Copy to a directory already in PATH**:
-```bash
-sudo cp berzifetch /usr/local/bin/
-# Now you can run: berzifetch (from anywhere)
-```
+**Copy to a directory already in PATH**:
 
-Option 2: **Add its directory to PATH** (better for development):
 ```bash
-# Add to ~/.bashrc:
-export PATH="$PATH:$HOME/Downloads/berzifetch"
+sudo cp main /usr/local/bin/berzifetch
+# Now you can run: berzifetch (from anywhere)
 
 # Reload
 source ~/.bashrc
 
-# Test
-berzifetch
-```
-
-**Exercise 4.10**:
-```bash
-# Use Option 1
-cd ~/Downloads/berzifetch
-sudo cp berzifetch /usr/local/bin/
-
 # Verify
 which berzifetch
 berzifetch
-```
 
----
+```
 
 ### Creating a berzifetch Alias
 
 Let's make it run every time you open a terminal!
 
 **Exercise 4.11**:
+
 ```bash
 nano ~/.bashrc
 
@@ -403,19 +393,6 @@ source ~/.bashrc
 ```
 
 Now every new terminal shows your system info! 🎉
-
----
-
-### Customizing berzifetch
-
-Check if berzifetch has a config file:
-```bash
-ls ~/.config/berzifetch/
-# OR
-berzifetch --help
-```
-
-Explore customization options in the repository README.
 
 ---
 
@@ -467,111 +444,28 @@ psgrep firefox          # Find Firefox processes
 
 ---
 
-## Capstone Exercise 1: Build Your Perfect Shell
+## Hands-On Challenge
 
-Create a personalized `.bashrc` setup:
+Ready to practice? Complete the hands-on challenge in the workshop repository:
 
-**Requirements**:
-1. Add 5 useful aliases
-2. Customize your prompt with colors
-3. Install and configure berzifetch to auto-run
-4. Add the `mkcd` and `backup` functions
-5. Add your `~/bin` directory to PATH (create it if needed)
+**[Part 4 Challenge on GitHub](https://github.com/bakayu/linux-tutorial/tree/master/04-environment-customization)**
 
-**Bonus**:
-- Add a welcome message with your name and date
-- Create an alias that shows your top 10 most-used commands
+**Challenge**: Customize your shell with useful aliases and functions to boost your productivity.
 
-<details>
-<summary>Click to reveal solution</summary>
+The challenge includes:
+
+- Specific aliases to add to your config
+- A useful function to create
+- Verification that everything works
+- Bonus customizations to explore
+
+Clone the repository and give it a try:
 
 ```bash
-# Backup first!
-cp ~/.bashrc ~/.bashrc.backup-$(date +%Y%m%d)
-
-# Edit
-nano ~/.bashrc
-
-# Add these sections:
-
-# === PROMPT ===
-PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "
-
-# === ALIASES ===
-alias ll='ls -lah'
-alias ..='cd ..'
-alias gs='git status'
-alias reload='source ~/.bashrc'
-alias h='history'
-
-# === FUNCTIONS ===
-mkcd() {
-    mkdir -p "$1" && cd "$1"
-}
-
-backup() {
-    cp "$1" "$1.backup-$(date +%Y%m%d-%H%M%S)"
-}
-
-# === PATH ===
-export PATH="$PATH:$HOME/bin"
-
-# === STARTUP ===
-echo "Welcome, $USER! Today is $(date +%A,\ %B\ %d,\ %Y)"
-berzifetch
-
-# Save and reload
-source ~/.bashrc
+git clone https://github.com/bakayu/linux-tutorial.git
+cd linux-tutorial/04-environment-customization
+cat README.md
 ```
-
-**Bonus - Top 10 commands**:
-```bash
-alias topcommands='history | awk "{print \$2}" | sort | uniq -c | sort -rn | head -10'
-```
-
-</details>
-
----
-
-## Capstone Exercise 2: Environment Detective
-
-Create a script that displays your environment setup.
-
-**Exercise 4.13**: Create `~/bin/myenv`:
-```bash
-mkdir -p ~/bin
-nano ~/bin/myenv
-```
-
-**Script content**:
-```bash
-#!/bin/bash
-
-echo "=== My Shell Environment ==="
-echo "User: $USER"
-echo "Home: $HOME"
-echo "Shell: $SHELL"
-echo "Editor: $EDITOR"
-echo ""
-
-echo "=== PATH Directories ==="
-echo $PATH | tr ':' '\n' | nl
-echo ""
-
-echo "=== Custom Aliases ==="
-alias | grep -v "^alias ls" | head -10
-echo ""
-
-echo "=== Functions ==="
-declare -F | cut -d' ' -f3
-```
-
-**Make it executable and run**:
-```bash
-chmod +x ~/bin/myenv
-myenv
-```
-
 ---
 
 ## Advanced: Shell Configuration Files
@@ -624,13 +518,3 @@ function_name() {       # Define function
 export PATH="$PATH:/new/path"   # Add to PATH
 which command                    # Find command location
 ```
-
----
-
-## Next Part
-
-**Continue to Part 5:** [The Final Challenge - Putting It All Together](/blog/linux-tutorial/05-final-challenge)
-
-## Previous Part
-
-**Back to Part 3:** [Permissions & Processes - System Control](/blog/linux-tutorial/03-permissions-processes)

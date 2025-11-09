@@ -1,7 +1,7 @@
 +++
 title = "Part 3: Permissions & Processes - System Control"
 date = 2025-11-09
-weight = 3
+weight = 2
 description = "Master file permissions, ownership, and process management on Linux"
 
 [taxonomies]
@@ -12,14 +12,20 @@ series = "Linux Command-Line Tutorial"
 series_part = 3
 toc = true
 quick_navigation_buttons = true
+show_previous_next_article_links = true
+invert_previous_next_article_links = true
 giscus = true
 +++
 
 ## Navigation
 
-**Continue to Part 4:** [Environment Mastery - Customizing Your Shell](/blog/linux-tutorial/04-environment-customization)
-
-**Back to Part 2:** [Reading & Searching - Master Text Processing](/blog/linux-tutorial/02-reading-searching)
+0. [Tutorial Index](/blog/linux-tutorial)
+1. [Part-00 : Setup](/blog/linux-tutorial/00-setup)
+2. [Part-01 : Getting Started](/blog/linux-tutorial/01-getting-started)
+3. [Part-02 : Reading and Searching](/blog/linux-tutorial/02-reading-searching)
+4. [Part-03 : Permissions and Processes](/blog/linux-tutorial/03-permissions-processes) ◄ You are here
+5. [Part-04 : Environment Customization](/blog/linux-tutorial/04-environment-customization)
+6. [Part-05 : Solutions and Next Steps](/blog/linux-tutorial/05-solutions)
 
 ---
 
@@ -421,77 +427,29 @@ uname -m                # Architecture
 
 ---
 
-## Capstone Exercise 1: Script Execution
+## Hands-On Challenge
 
-Create and run a system monitoring script.
+Ready to practice? Complete the hands-on challenge in the workshop repository:
 
-**Your Task**: Create `sysmon.sh` that shows:
-1. Current date/time
-2. Disk usage of /home
-3. Top 3 memory-consuming processes
-4. Number of running processes
+**[Part 3 Challenge on GitHub](https://github.com/bakayu/linux-tutorial/tree/master/03-permissions-processes)**
 
-<details>
-<summary>Click to reveal solution</summary>
+**Challenge**: Set up scripts with proper file permissions and create a system information script.
 
-```bash
-cat > sysmon.sh << 'EOF'
-#!/bin/bash
+The challenge includes:
 
-echo "=== System Monitor ==="
-echo "Date: $(date)"
-echo ""
+- Pre-created scripts that need permission fixes
+- A script creation task
+- Verification of both permissions and functionality
+- Detailed hints about permission numbers
 
-echo "=== Disk Usage: /home ==="
-df -h /home
-echo ""
-
-echo "=== Top 3 Memory Users ==="
-ps aux --sort=-%mem | head -n 4
-echo ""
-
-echo "=== Process Count ==="
-echo "Running processes: $(ps aux | wc -l)"
-EOF
-
-chmod +x sysmon.sh
-./sysmon.sh
-```
-
-</details>
-
----
-
-## Capstone Exercise 2: Permission Puzzle
-
-Setup:
-```bash
-cd ~/workshop-practice
-mkdir secure_project
-cd secure_project
-touch public.txt private.txt script.sh config.cfg
-```
-
-**Requirements**:
-1. `public.txt` - Everyone can read, only you can write
-2. `private.txt` - Only you can read/write
-3. `script.sh` - Only you can read/write/execute
-4. `config.cfg` - You can read/write, group can read
-
-<details>
-<summary>Click to reveal solution</summary>
+Clone the repository and give it a try:
 
 ```bash
-chmod 644 public.txt        # rw-r--r--
-chmod 600 private.txt       # rw-------
-chmod 700 script.sh         # rwx------
-chmod 640 config.cfg        # rw-r-----
-
-# Verify
-ls -l
+git clone https://github.com/bakayu/linux-tutorial.git
+cd linux-tutorial/03-permissions-processes
+./setup.sh
+cat README.md
 ```
-
-</details>
 
 ---
 
@@ -522,13 +480,3 @@ free -h                 # Memory usage
 which command           # Find executable
 uname -a                # System info
 ```
-
---
-
-## Next Part
-
-**Continue to Part 4:** [Environment Mastery - Customizing Your Shell](/blog/linux-tutorial/04-environment-customization)
-
-## Previous Part
-
-**Back to Part 2:** [Reading & Searching - Master Text Processing](/blog/linux-tutorial/02-reading-searching)
