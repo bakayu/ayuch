@@ -1,7 +1,7 @@
 +++
 title = "Part 0: Setting Up Your Environment"
-date = 2025-11-06
-weight = 0
+date = 2025-11-09
+weight = 5
 description = "Get your Linux command-line environment ready for the workshop"
 
 [taxonomies]
@@ -13,9 +13,25 @@ series_part = 0
 toc = true
 quick_navigation_buttons = true
 giscus = true
+show_previous_next_article_links = true
+invert_previous_next_article_links = true
 +++
 
+## Navigation
+
+0. [Tutorial Index](/blog/linux-tutorial)
+1. [Part-00 : Setup](/blog/linux-tutorial/00-setup) ◄ You are here
+2. [Part-01 : Getting Started](/blog/linux-tutorial/01-getting-started)
+3. [Part-02 : Reading and Searching](/blog/linux-tutorial/02-reading-searching)
+4. [Part-03 : Permissions and Processes](/blog/linux-tutorial/03-permissions-processes)
+5. [Part-04 : Environment Customization](/blog/linux-tutorial/04-environment-customization)
+6. [Part-05 : Solutions and Next Steps](/blog/linux-tutorial/05-solutions)
+
+---
+
 Before we dive into the workshop, let's get your environment set up! This guide will walk you through installing everything you need, regardless of your operating system.
+
+{{ admonition(type="note", title="About Shell Compatibility", text="This tutorial is written for **Bash** (the most common Linux shell). If you're using **Zsh** (default on macOS Catalina+), don't worry—almost everything will work identically! The main differences you might notice are in advanced customization (`.zshrc` vs `.bashrc`), but we'll point those out when relevant.") }}
 
 ## Windows Users: Installing WSL (Windows Subsystem for Linux)
 
@@ -325,16 +341,6 @@ Now that your environment is set up, you're ready to start learning!
 - [X] Basic commands tested
 
 **Ready to begin?** Let's dive into the actual command-line skills!
-
----
-
-## Next Part
-
-**Start learning:** [Part 1: Getting Started - Your First Commands](/blog/linux-tutorial/01-getting-started)
-
-## Series Index
-
-**Back to Workshop:** [Linux Command-Line Tutorial](/blog/linux-tutorial)
 
 ---
 
