@@ -44,7 +44,7 @@ By the end of this series, you'll be comfortable with:
 All exercises and examples are available in the [workshop repository](https://github.com/bakayu/linux-tutorial).
 
 ```bash
-git clone https://github.com/bakayu/linux-tutorial
+git clone https://github.com/bakayu/linux-tutorial.git
 cd linux-tutorial
 ```
 
