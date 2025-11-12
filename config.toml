@@ -136,7 +136,7 @@ post_listing_date = "updated"
 
 # Enable iine like buttons on all posts: https://iine.to/
 # Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
-# iine = true
+iine = true
 iine_icon = "heart" # See https://iine.to/#customise
 # Unify like counts across all language versions of the same page.
 # When enabled, likes on /es/blog/hello/ will count towards /blog/hello/ (default language).
@@ -387,7 +387,7 @@ category = "General"
 category_id = "DIC_kwDOQQegP84CxgJg"  # Find this value in https://giscus.app/
 mapping = "pathname"  # Available: pathname; url; title; slug. "slug" will use the post's filename (slug); this is the only way to share comments between languages.
 strict_title_matching = 1  # 1 to enable, 0 to disable. https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md#data-strict
-enable_reactions = 1  # 1 to enable, 0 to disable.
+enable_reactions = 0  # 1 to enable, 0 to disable.
 comment_box_above_comments = true
 light_theme = "noborder_light"
 dark_theme = "noborder_dark"
