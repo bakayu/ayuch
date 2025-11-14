@@ -14,6 +14,6 @@ social_media_card = "/images/go-to-prod/banner-1.jpg"
 
 ![marcus aurelius](/images/go-to-prod/banner-1.jpg)
 
-> *“The world is a maze without a center. Become it, or be forever lost.”* -- Silenius’s Meditations
+> *“The world is but a maze without a center. Become it, or be forever lost.”* -- Silenius’s Meditations
 
 [Tutorial Index](/blog/go-to-prod)
