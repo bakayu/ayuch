@@ -8,7 +8,7 @@ tags = ["gRPC", "REST", "rust", "tonic", "backend"]
 
 [extra]
 giscus = true
-social_media_card = "/images/water-drop.gif"
+social_media_card = "/images/reze-plush.jpg"
 +++
 
 ![banner](/images/reze-plush.jpg)
