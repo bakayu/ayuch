@@ -4,7 +4,7 @@ date = 2026-03-11
 description = "Not a deep spec dive - just a look at when gRPC beats REST."
 
 [taxonomies]
-tags = ["gRPC", "REST", "rust", "tonic", "backend"]
+tags = ["gRPC", "REST", "rust", "tonic", "backend", "tutorial"]
 
 [extra]
 giscus = true

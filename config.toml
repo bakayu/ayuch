@@ -29,6 +29,7 @@ index_format = "elasticlunr_json"
 
 
 [markdown]
+external_links_target_blank = true
 bottom_footnotes = true
 smart_punctuation = true
 
@@ -252,9 +253,9 @@ social_media_card = "/images/sc2.jpg"
 menu = [
     { name = "about", url = "about", trailing_slash = true },
     { name = "blog", url = "blog", trailing_slash = true },
-    { name = "archive", url = "archive", trailing_slash = true },
+    # { name = "archive", url = "archive", trailing_slash = true },
     { name = "tags", url = "tags", trailing_slash = true },
-    # { name = "projects", url = "projects", trailing_slash = true },
+    { name = "projects", url = "projects", trailing_slash = true },
 ]
 
 # The RSS icon will be shown if (1) it's enabled and (2) the following variable is set to true.
