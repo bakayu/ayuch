@@ -18,28 +18,22 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{fontawesome5}
 \input{glyphtounicode}
 
 % Define custom colors
 \definecolor{linkcolor}{RGB}{0, 140, 246}
 
-% \hypersetup{
-%     colorlinks=true,          % false: boxed links; true: colored text
-%     linkbordercolor=darkblue,     % color of internal links (sections, pages)
-%     urlbordercolor=darkblue,      % color of URL links
-%     pdfborderstyle={/S/U/W 0.5}  % Style: Underline (U), width 1
-% }
-
 \hypersetup{
     colorlinks=true,
-    linkcolor=blue,      % Color of internal links
-    citecolor=red,       % Color of bibliographical citations
-    filecolor=magenta,   % Color of file links
-    urlcolor=linkcolor,       % Color of external hyperlinks
+    linkcolor=blue,
+    citecolor=red,
+    filecolor=magenta,
+    urlcolor=linkcolor,
 }
 
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -48,8 +42,8 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.2in}
 
 \urlstyle{same}
 
@@ -62,7 +56,6 @@
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
 %-------------------------
@@ -113,51 +106,67 @@
 %----------HEADING----------
 \begin{center}
     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{\Huge \scshape Ayush Chauhan} & New Delhi, IN $|$ \href{mailto:mail@ayuch.dev}{mail@ayuch.dev} $|$ contact: +91 8448522434 \\
-      github: \href{https://github.com/bakayu}{github.com/bakayu} & blog: \href{https://ayuch.dev/blog}{ayuch.dev/blog} $|$ linkedin: \href{https://linkedin.com/in/ayuch}{linkedin.com/in/ayuch} \\
+      \textbf{\Huge \scshape Ayush Chauhan} & \faMapMarker*\ New Delhi, IN $|$ \href{mailto:mail@ayuch.dev}{\faEnvelope\ mail@ayuch.dev} $|$ \faPhone\ +91 8448522434 \\
+      \href{https://github.com/bakayu}{\faGithub\ github.com/bakayu} & \href{https://ayuch.dev/blog}{\faGlobe\ ayuch.dev/blog} $|$ \href{https://linkedin.com/in/ayuch}{\faLinkedin\ linkedin.com/in/ayuch} \\
     \end{tabular*}
 \end{center}
-\vspace{-5pt}
+\vspace{-6pt}
 
+%-----------PROFESSIONAL SUMMARY-----------
+\section{Summary}
+Systems-focused software engineer building production ready Rust services, open-source developer tooling, and blockchain applications. Experienced with async runtimes, gRPC pipelines, Linux systems programming, and smart contract development on Solana. Active open-source contributor with work spanning OpenPrinting, LF Decentralized Trust, and independent CLI and backend projects.
+
+\vspace{-5pt}
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
       {Chitkara University}{Rajpura, Punjab IN}
-      {Bachelor of Engineering in Computer Science and Engineering; CGPA: 9.3}{Expected May 2028}
+      {Bachelor of Engineering in Computer Science and Engineering; CGPA: 9.31}{Expected May 2028}
   \resumeSubHeadingListEnd
 
 \vspace{-5pt}
 %-----------EXPERIENCE-----------
 \section{Experience}
-  \resumeSubHeadingListStart
+    \resumeSubHeadingListStart
 
-    \resumeSubheading
-      {Turbin3 Builder Cohort}{Jan. 2026 -- Mar. 2026}
-      {Solana Ecosystem Developer}{Remote}
-      \resumeItemListStart
-        \resumeItem{Built smart contract vaults, escrow systems using Anchor, AMM liquidity pools, and NFT staking programs}
-        \resumeItem{Implemented on-chain signature verification (ed25519) for a dice game}
-        \resumeItem{Developed the Samizdat Protocol - a decentralized digital signage platform (DePIN) for graduation capstone}
-      \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Google Summer of Code -- OpenPrinting} $|$ \emph{Intern}}{May 2026 -- Present}
+          \resumeItemListStart
+            \resumeItem{Building a production-ready CPDB-based print dialog for the COSMIC desktop, integrated with \texttt{xdg-desktop-portal-cosmic} (PreparePrint + Print) so desktop and sandboxed apps can print through a native COSMIC UX}
+          \resumeItemListEnd
 
-    \resumeSubheading
-      {Mentee - LF Decentralized Trust}{Jun. 2025 -- Nov. 2025}
-      {LF Decentralized Trust}{Remote}
-      \resumeItemListStart
-        \resumeItem{Implemented open-source Trust Tasks for Layer 3 of the ToIP stack, porting an MCP NTP Timeserver to a decentralized TMCP server for AI agents}
-        \resumeItem{Designed secure JSON-RPC protocols and PoC for a Python-based TMCP server, utilizing P-256 Elliptic Curve cryptography and replay protection, with a modular credential handler for DID verification}
-      \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Turbin3 Builder Cohort} $|$ \emph{Solana Ecosystem Developer}}{Jan. 2026 -- Mar. 2026}
+          \resumeItemListStart
+            \resumeItem{Built smart contract vaults, escrow systems using Anchor, AMM liquidity pools, and NFT staking programs}
+            \resumeItem{Implemented on-chain signature verification (ed25519) for a dice game}
+            \resumeItem{Developed the Samizdat Protocol -- a decentralized digital signage platform (DePIN) for graduation capstone}
+          \resumeItemListEnd
 
-  \resumeSubHeadingListEnd
+      \resumeProjectHeading
+          {\textbf{LF Decentralized Trust} $|$ \emph{Mentee}}{Jun. 2025 -- Nov. 2025}
+          \resumeItemListStart
+            \resumeItem{Implemented open-source Trust Tasks for Layer 3 of the ToIP stack, porting an MCP NTP Timeserver to a decentralized TMCP server for AI agents}
+            \resumeItem{Designed secure JSON-RPC protocols and PoC for a Python-based TMCP server, utilizing P-256 Elliptic Curve cryptography and replay protection, with a modular credential handler for DID verification}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
-      
+
       \resumeProjectHeading
-          {\textbf{Gitx} $|$ \emph{Go, Bubbletea, Charm Stack, Hugo, GitHub Actions} $|$ \href{https://github.com/gitxtui/gitx}{GitHub}}{}
+          {\textbf{Raven} $|$ \emph{Rust, Tokio, Tonic (gRPC), Axum, ClickHouse, VictoriaMetrics, Docker} $|$ \href{https://github.com/bakayu/raven}{\faGithub\ GitHub}}{}
+          \resumeItemListStart
+            \resumeItem{Linux daemon agent reading \texttt{/proc} metrics (10s) and tailing logs via \texttt{inotify}, shipped over a gRPC-over-TLS pipeline with bearer token auth, WAL buffering, and exponential backoff}
+            \resumeItem{Central Rust/Axum server routes data to VictoriaMetrics and ClickHouse, with a WebSocket live-tail API and React dashboard covering metrics, logs, and alert management}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Gitx} $|$ \emph{Go, Bubbletea, Charm Stack, Hugo, GitHub Actions} $|$ \href{https://github.com/gitxtui/gitx}{\faGithub\ GitHub}}{}
           \resumeItemListStart
             \resumeItem{Developed a powerful TUI for Git with interactive features to make version control accessible}
             \resumeItem{Supports Git operations such as staging/committing, managing commit history, and branch/stash management}
@@ -165,37 +174,9 @@
           \resumeItemListEnd
 
       \resumeProjectHeading
-          {\textbf{lq} $|$ \emph{Go, CLI, bubbletea, GitHub Actions} $|$ \href{https://github.com/bakayu/lq}{GitHub}}{}
+          {\textbf{lq} $|$ \emph{Go, CLI, Bubbletea, GitHub Actions} $|$ \href{https://github.com/bakayu/lq}{\faGithub\ GitHub}}{}
           \resumeItemListStart
             \resumeItem{Developed a rapid command-line tool in Go to instantly generate standard \texttt{.gitignore} and \texttt{LICENSE} templates}
-          \resumeItemListEnd
-
-      \resumeProjectHeading
-          {\textbf{Lessvec} $|$ \emph{Rust, crates.io, GitHub Actions} $|$ \href{https://github.com/bakayu/lessvec}{GitHub}}{}
-          \resumeItemListStart
-            \resumeItem{Implemented a custom, lightweight vector data structure in Rust relying solely on the standard library}
-          \resumeItemListEnd
-      
-      \resumeProjectHeading
-          {\textbf{Samizdat Protocol} $|$ \emph{Rust, Anchor, Solana, Solana-kite, TypeScript, NextJS} $|$ \href{https://github.com/bakayu/samizdat}{GitHub}}{}
-          \resumeItemListStart
-            \resumeItem{Built a decentralized digital signage platform (DePIN) based on r/pixel for the Turbin3 graduation capstone}
-            \resumeItem{Developed Anchor smart contracts for node registration, publisher accounts, and ad campaign management}
-          \resumeItemListEnd
-
-      \resumeProjectHeading
-          {\textbf{Velo} $|$ \emph{Rust, Actix-web, SQLx, PostgreSQL, Docker, Azure} $|$ \href{https://github.com/bakayu/velo}{GitHub}}{}
-          \resumeItemListStart
-            \resumeItem{Developed a production-ready newsletter subscription service using Rust and Actix-web}
-            \resumeItem{Implemented type-safe database interactions with SQLx and PostgreSQL, ensuring data integrity}
-            \resumeItem{Automated testing, security audits, and Dockerized deployment to Azure Web Apps using GitHub Actions}
-          \resumeItemListEnd
-
-      \resumeProjectHeading
-          {\textbf{Battlegrid} $|$ \emph{Java, WebSockets, CLI} $|$ \href{https://github.com/bakayu/battlegrid}{GitHub}}{}
-          \resumeItemListStart
-            \resumeItem{Developed a real-time, 2-player multiplayer Battleship game playable entirely within the terminal}
-            \resumeItem{Architected a client-server model using Java and WebSockets to handle concurrent game lobbies and inputs}
           \resumeItemListEnd
 
     \resumeSubHeadingListEnd
@@ -203,32 +184,32 @@
 
 %-----------VOLUNTEERING-----------
 \section{Volunteering}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Technical Lead \& Core Team}{Sep. 2024 -- Present}
-      {Open Source Chandigarh}{Rajpura, Punjab IN}
-      \resumeItemListStart
-        \resumeItem{Leading technical initiatives, architecting community projects, and mentoring team members}
-        \resumeItem{Organized and conducted workshops on Git and GitHub, onboarding 100+ students to open source}
-      \resumeItemListEnd
+    \resumeSubHeadingListStart
 
-    \resumeSubheading
-      {Open Source Contributor}{Aug. 2024 -- Present}
-      {Self-Driven}{Remote}
-      \resumeItemListStart
-        \resumeItem{Actively maintain and open-source personal projects, releasing developer tools and CLI applications to the public}
-        \resumeItem{Contributed to many open-source organizations such as Graphite, OpenWallet Foundation, OpenPrinting, Layer5io}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
+      \resumeProjectHeading
+          {\textbf{Technical Lead \& Core Team} $|$ \emph{Open Source Chandigarh} $|$ Rajpura, Punjab IN}{Sep. 2024 -- Present}
+          \resumeItemListStart
+            \resumeItem{Leading technical initiatives, architecting community projects, and mentoring team members}
+            \resumeItem{Organized and conducted workshops on Git and GitHub, onboarding 100+ students to open source}
+          \resumeItemListEnd
 
-\vspace{-20pt}
+      \resumeProjectHeading
+          {\textbf{Open Source Contributor} $|$ \emph{Self-Driven}}{Aug. 2024 -- Present}
+          \resumeItemListStart
+            \resumeItem{Actively maintain and open-source personal projects, releasing developer tools and CLI applications to the public}
+            \resumeItem{Contributed to open-source organizations such as Graphite, OpenWallet Foundation, OpenPrinting, Layer5io}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+\vspace{-15pt}
 
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{Languages}{: Rust, Go, Python, Java, C, SQL (PostgreSQL), TypeScript} \\
-     \textbf{Backend \& Systems}{: Actix-web, Axum, Gin, FastAPI, Bubbletea, Tokio, Django, Solana, Anchor Framework} \\
+     \textbf{Backend \& Systems}{: Actix-web, Axum, Tokio, Tonic, Gin, FastAPI, Bubbletea, Django, Solana, Anchor Framework} \\
      \textbf{DevOps \& Tools}{: Git, Docker, Docker Compose, GitHub Actions, Azure, Linux, Bash, Kubernetes}
     }}
  \end{itemize}
