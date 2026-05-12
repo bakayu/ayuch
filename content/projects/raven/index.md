@@ -4,14 +4,14 @@ description = "A lightweight, self-hostable cloud infrastructure monitoring and 
 weight = 1
 
 [taxonomies]
-tags = ["monitoring", "telemetry", "dev tooling", "rust"]
+tags = ["monitoring", "telemetry", "dev tooling", "rust", "gRPC"]
 
 [extra]
 local_image = "projects/raven/raven-icon.svg"
 social_media_card = "projects/raven/raven-icon.svg"
-canonical_url = "https://github.com/bakayu/raven"
-link_to = "https://github.com/bakayu/raven"
+canonical_url = "https://github.com/rvnhq/raven"
+link_to = "https://github.com/rvnhq/raven"
 +++
 
 
-#### [GitHub](https://github.com/bakayu/raven) • [Website](#)
+#### [GitHub](https://github.com/rvnhq/raven) • [Website](#)
