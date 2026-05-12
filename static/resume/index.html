@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content="3; url=/files/resume.pdf">
+    <link rel="canonical" href="/files/resume.pdf">
+    <title>resume · ayu.ch</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            background: #1a1a1a;
+            color: #cdd6f4;
+            font-family: "IBM Plex Mono", "JetBrains Mono", "Fira Code", monospace;
+            font-size: 15px;
+        }
+
+        .wrap {
+            padding: 2rem;
+            max-width: 420px;
+            width: 100%;
+        }
+
+        .label {
+            font-size: 14px;
+            color: #6c7086;
+            letter-spacing: 0.08em;
+            /* text-transform: uppercase; */
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #cdd6f4;
+            margin-bottom: 0.5rem;
+        }
+
+        .sub {
+            color: #6c7086;
+            font-size: 14px;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .actions {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .link-primary {
+            color: #89b4fa;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .link-primary:hover {
+            text-decoration: underline;
+        }
+
+        .link-secondary {
+            color: #45475a;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .link-secondary:hover {
+            color: #6c7086;
+        }
+
+        .progress {
+            margin-top: 3rem;
+            height: 1px;
+            background: #313244;
+            overflow: hidden;
+        }
+
+        .bar {
+            width: 0;
+            height: 100%;
+            background: #45475a;
+            animation: fill 3s linear forwards;
+        }
+
+        @keyframes fill {
+            to {
+                width: 100%;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .bar {
+                animation: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="wrap">
+        <p class="label">~/ayu.ch</p>
+        <h1>opening Ayu's resume</h1>
+        <p class="sub">redirecting in 3 seconds.</p>
+        <div class="actions">
+            <a class="link-primary" href="/files/resume.pdf">open now</a>
+            <a class="link-secondary" href="/">← home</a>
+        </div>
+        <div class="progress" aria-hidden="true">
+            <div class="bar"></div>
+        </div>
+    </main>
+</body>
+
+</html>

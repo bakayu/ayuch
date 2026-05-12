@@ -14,4 +14,4 @@ Currently a student in the sophomore year, developer, foss lover and a casual mo
 
 **Current Focus:** <u>**Rust**,</u> <u>**Systems programming**,</u> <u>**Developer tooling.**</u>
 
-[Resume](files/resume.pdf) · [GitHub](https://github.com/bakayu) · [LinkedIn](https://linkedin.com/in/ayuch) · [Email](mailto:mail@ayuch.dev)
+[Resume](resume) · [GitHub](https://github.com/bakayu) · [LinkedIn](https://linkedin.com/in/ayuch) · [Email](mailto:mail@ayuch.dev)
