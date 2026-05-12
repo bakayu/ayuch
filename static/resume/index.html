@@ -113,7 +113,7 @@
     <main class="wrap">
         <p class="label">~/ayu.ch</p>
         <h1>opening Ayu's resume</h1>
-        <p class="sub">redirecting in 3 seconds.</p>
+        <p class="sub">redirecting in <span id="countdown">3</span> seconds.</p>
         <div class="actions">
             <a class="link-primary" href="/files/resume.pdf">open now</a>
             <a class="link-secondary" href="/">← home</a>
@@ -122,6 +122,21 @@
             <div class="bar"></div>
         </div>
     </main>
+    <script>
+        const countdownEl = document.getElementById("countdown");
+        if (countdownEl) {
+            let remaining = 3;
+            const tick = () => {
+                remaining = Math.max(0, remaining - 1);
+                countdownEl.textContent = String(remaining);
+                if (remaining === 0) {
+                    clearInterval(timerId);
+                }
+            };
+
+            const timerId = setInterval(tick, 1000);
+        }
+    </script>
 </body>
 
 </html>
