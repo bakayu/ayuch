@@ -13,7 +13,7 @@ social_media_card = "/images/cat.jpg"
 
 ![banner](/images/cat.jpg)
 
-> *Icarus laughed as he fell, for he knew that to fall meant he had once **soared**.* -- Fiona
+> *For a moment, nothing happened. Then, after a second or so, nothing continued to happen.* — **Douglas Adams**
 
 ## Preface
 
@@ -243,5 +243,3 @@ D-Bus has a reputation for being arcane and intimidating (speaking from my perso
 You define a trait, add a macro, connect to the session bus - and you're talking to the notification daemon, the portal interfaces, the power manager. The whole desktop is right there, listening.
 
 ...
-
-*Icarus laughed as he fell, for he knew that to fall meant he had once soared. You won't fall here. Connect to the bus and start calling things.*
