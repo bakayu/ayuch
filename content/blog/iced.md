@@ -90,7 +90,17 @@ Let's initialize our project and build our app iteratively. (Full code here: [Gi
 
 First, we need to define our application's State and describe how to render it. Initially, we won't have any real CPU stats, so we'll start with `cpu_stats` as `None` (which defaults to 0% usage).
 
-Create `src/main.rs`:
+Initialize a rust project with `cargo init system-monitor`, add the following dependencies to your `Cargo.toml` file:
+
+```toml
+[dependencies]
+anyhow = "1.0.102"
+iced = { version = "0.14.0", features = ["tokio"] }
+"procfs" = "0.18"
+tokio = { version = "1.52.3", features = ["full"] }
+```
+
+`src/main.rs`:
 
 ```rust
 mod cpu;
