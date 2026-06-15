@@ -10,7 +10,7 @@ max_projects = 3
 show_projects_first = false
 +++
 
-Currently a student in the sophomore year, developer, foss lover and a casual motorsport fan. This is my portfolio and blogging website.
+Computer Science Engineering student (Pre-Final Year), developer, and open-source contributor. Casual motorsport fan. Welcome to my personal portfolio and blog.
 
 **Current Focus:** <u>**Rust**,</u> <u>**Systems programming**,</u> <u>**Developer tooling.**</u>
 
