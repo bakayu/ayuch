@@ -18,19 +18,7 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{fontawesome5}
 \input{glyphtounicode}
-
-% Define custom colors
-\definecolor{linkcolor}{RGB}{0, 140, 246}
-
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    citecolor=red,
-    filecolor=magenta,
-    urlcolor=linkcolor,
-}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -53,7 +41,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-8pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 \pdfgentounicode=1
@@ -106,111 +94,131 @@
 %----------HEADING----------
 \begin{center}
     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{\Huge \scshape Ayush Chauhan} & \faMapMarker*\ New Delhi, IN $|$ \href{mailto:mail@ayuch.dev}{\faEnvelope\ mail@ayuch.dev} $|$ \faPhone\ +91 8448522434 \\
-      \href{https://github.com/bakayu}{\faGithub\ github.com/bakayu} & \href{https://ayuch.dev/blog}{\faGlobe\ ayuch.dev/blog} $|$ \href{https://linkedin.com/in/ayuch}{\faLinkedin\ linkedin.com/in/ayuch} \\
+      \textbf{\Huge \scshape Ayush Chauhan} &  \href{mailto:mail@ayuch.dev}{mail@ayuch.dev} $|$ +91 8448522434 \\
+      \href{https://github.com/bakayu}{github.com/bakayu} & \href{https://ayuch.dev/blog}{ayuch.dev/blog} $|$ \href{https://linkedin.com/in/ayuch}{linkedin.com/in/ayuch} \\
     \end{tabular*}
 \end{center}
 \vspace{-6pt}
 
-%-----------PROFESSIONAL SUMMARY-----------
-\section{Summary}
-Systems-focused software engineer building production ready Rust services, open-source developer tooling, and blockchain applications. Experienced with async runtimes, gRPC pipelines, Linux systems programming, and smart contract development on Solana. Active open-source contributor with work spanning OpenPrinting, LF Decentralized Trust, and independent CLI and backend projects.
+%-----------SUMMARY-----------
+% \section{\textbf{Summary}}
+% Versatile software engineer with expertise in systems programming, distributed systems, and large-scale software design. Experienced building production Rust services, Linux daemons, and developer tooling; enthusiastic about solving complex engineering problems across the full stack. Active open-source contributor selected for Google Summer of Code 2026 and Linux Foundation LFX Mentorship 2025.
 
 \vspace{-5pt}
+
 %-----------EDUCATION-----------
-\section{Education}
+\section{\textbf{Education}}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Chitkara University}{Rajpura, Punjab IN}
+      {Chitkara University}{Rajpura, Punjab, India}
       {Bachelor of Engineering in Computer Science and Engineering; CGPA: 9.31}{Expected May 2028}
+      % \resumeItemListStart
+        % \resumeItem{Coursework: Data Structures and Algorithms, OS, Computer Networks, Distributed Systems \& Software Design}
+      % \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 \vspace{-5pt}
+
 %-----------EXPERIENCE-----------
-\section{Experience}
+\section{\textbf{Experience}}
     \resumeSubHeadingListStart
 
       \resumeProjectHeading
-          {\textbf{Google Summer of Code -- OpenPrinting} $|$ \emph{Intern}}{May 2026 -- Present}
+          {\textbf{Google Summer of Code -- OpenPrinting} $|$ \emph{Software Engineering Intern}}{May 2026 -- Present}
           \resumeItemListStart
-            \resumeItem{Building a production-ready CPDB-based print dialog for the COSMIC desktop, integrated with \texttt{xdg-desktop-portal-cosmic} (PreparePrint + Print) so desktop and sandboxed apps can print through a native COSMIC UX}
+            \resumeItem{Building a CPDB-based print dialog frontend for the COSMIC desktop in Rust and libcosmic, providing native printing workflows for Linux desktop and Flatpak applications}
+
+            \resumeItem{Integrated zbus into cpdb-rs, replacing glib-based IPC with asynchronous D-Bus support and enabling compatibility with pure async Rust environments}
+            
+            \resumeItem{Authored \textbf{5+} code examples illustrating async D-Bus integration and CPDB workflows for Rust applications}
+            
           \resumeItemListEnd
 
       \resumeProjectHeading
           {\textbf{Turbin3 Builder Cohort} $|$ \emph{Solana Ecosystem Developer}}{Jan. 2026 -- Mar. 2026}
           \resumeItemListStart
-            \resumeItem{Built smart contract vaults, escrow systems using Anchor, AMM liquidity pools, and NFT staking programs}
-            \resumeItem{Implemented on-chain signature verification (ed25519) for a dice game}
-            \resumeItem{Developed the Samizdat Protocol -- a decentralized digital signage platform (DePIN) for graduation capstone}
+            \resumeItem{Built and deployed \textbf{5+} smart contract programs on Solana using Anchor -- vaults, escrow systems, AMM liquidity pools, NFT staking, and a provably fair dice game with on-chain ed25519 signature verification}
+            \resumeItem{Designed Samizdat Protocol, a decentralized digital signage DePIN platform, applying distributed systems software design to a peer-to-peer infrastructure capstone}
           \resumeItemListEnd
 
       \resumeProjectHeading
-          {\textbf{LF Decentralized Trust} $|$ \emph{Mentee}}{Jun. 2025 -- Nov. 2025}
+          {\textbf{LF Decentralized Trust} $|$ \emph{Open Source Mentee}}{Jun. 2025 -- Nov. 2025}
           \resumeItemListStart
-            \resumeItem{Implemented open-source Trust Tasks for Layer 3 of the ToIP stack, porting an MCP NTP Timeserver to a decentralized TMCP server for AI agents}
-            \resumeItem{Designed secure JSON-RPC protocols and PoC for a Python-based TMCP server, utilizing P-256 Elliptic Curve cryptography and replay protection, with a modular credential handler for DID verification}
+            \resumeItem{Ported an MCP NTP Timeserver to a TMCP service, enabling trusted time verification for AI agent ecosystems}
+
+            \resumeItem{Designed 2 JSON-RPC protocols for credential issuance and presentation with replay protection, selective disclosure, and P-256 cryptographic operations}
+            
+            \resumeItem{Developed a modular PoW-based DID credential framework and validated interoperability with open-source LLMs including Qwen and Llama}
           \resumeItemListEnd
 
     \resumeSubHeadingListEnd
 
+\vspace{-3pt}
 
 %-----------PROJECTS-----------
-\section{Projects}
+\section{\textbf{Projects}}
     \resumeSubHeadingListStart
 
       \resumeProjectHeading
-          {\textbf{Raven} $|$ \emph{Rust, Tokio, Tonic (gRPC), Axum, ClickHouse, VictoriaMetrics, Docker} $|$ \href{https://github.com/bakayu/raven}{\faGithub\ GitHub}}{}
+          {\textbf{Raven} $|$ \emph{Rust, Tokio, Tonic, Axum, ClickHouse, VictoriaMetrics} $|$ \href{https://github.com/rvnhq/raven}{github.com/rvnhq/raven}}{}
           \resumeItemListStart
-            \resumeItem{Linux daemon agent reading \texttt{/proc} metrics (10s) and tailing logs via \texttt{inotify}, shipped over a gRPC-over-TLS pipeline with bearer token auth, WAL buffering, and exponential backoff}
-            \resumeItem{Central Rust/Axum server routes data to VictoriaMetrics and ClickHouse, with a WebSocket live-tail API and React dashboard covering metrics, logs, and alert management}
+            \resumeItem{Engineered a Rust observability platform comprising a Linux agent, gRPC ingestion service, and Axum control plane, storing logs in ClickHouse and metrics in VictoriaMetrics with a React dashboard for visualization}
+
+            \resumeItem{Implemented WAL-backed buffering, TLS-secured transport, inotify log tailing, and procfs-based system sampling through dedicated telemetry collection modules}
+            
+            \resumeItem{Sustained \textbf{41K+} HTTP requests/sec and \textbf{900+} gRPC RPCs/sec on a single container instance during concurrent load testing}
           \resumeItemListEnd
 
       \resumeProjectHeading
-          {\textbf{Gitx} $|$ \emph{Go, Bubbletea, Charm Stack, Hugo, GitHub Actions} $|$ \href{https://github.com/gitxtui/gitx}{\faGithub\ GitHub}}{}
+          {\textbf{Gitx} $|$ \emph{Go, Bubbletea, Charm Stack, GitHub Actions} $|$ \href{https://github.com/gitxtui/gitx}{github.com/gitxtui/gitx}}{}
           \resumeItemListStart
-            \resumeItem{Developed a powerful TUI for Git with interactive features to make version control accessible}
-            \resumeItem{Supports Git operations such as staging/committing, managing commit history, and branch/stash management}
-            \resumeItem{Added support for custom user-defined key bindings and themes with documentation and examples}
+            \resumeItem{Created a terminal-based Git client in Go supporting staging, commit history inspection, branching, stash management, and repository navigation}
+            
+            \resumeItem{Implemented customizable keybindings, themes, and workflow enhancements across \textbf{10 public releases} based on user feedback and bug reports}
+            
+            \resumeItem{Distributed cross-platform binaries for Linux, macOS, and Windows, reaching \textbf{200+ downloads} while coordinating contributions from \textbf{8 developers}}
           \resumeItemListEnd
 
       \resumeProjectHeading
-          {\textbf{lq} $|$ \emph{Go, CLI, Bubbletea, GitHub Actions} $|$ \href{https://github.com/bakayu/lq}{\faGithub\ GitHub}}{}
+          {\textbf{lq} $|$ \emph{Go, CLI, GitHub Actions} $|$ \href{https://github.com/bakayu/lq}{github.com/bakayu/lq}}{}
           \resumeItemListStart
-            \resumeItem{Developed a rapid command-line tool in Go to instantly generate standard \texttt{.gitignore} and \texttt{LICENSE} templates}
+            \resumeItem{Built a CLI utility that generates LICENSE and .gitignore templates for new repositories in a single command}
+
+            \resumeItem{Added support for all GitHub-recognized open-source licenses and templates covering popular programming languages and frameworks}
           \resumeItemListEnd
 
     \resumeSubHeadingListEnd
 
+\vspace{-3pt}
 
-%-----------VOLUNTEERING-----------
-\section{Volunteering}
+%-----------COMMUNITY-----------
+\section{\textbf{Community and Open Source}}
     \resumeSubHeadingListStart
 
       \resumeProjectHeading
-          {\textbf{Technical Lead \& Core Team} $|$ \emph{Open Source Chandigarh} $|$ Rajpura, Punjab IN}{Sep. 2024 -- Present}
+          {\textbf{Technical Lead \& Core Team} $|$ \emph{Open Source Chandigarh}}{Sep. 2024 -- Present}
           \resumeItemListStart
-            \resumeItem{Leading technical initiatives, architecting community projects, and mentoring team members}
-            \resumeItem{Organized and conducted workshops on Git and GitHub, onboarding 100+ students to open source}
+            \resumeItem{Leading technical direction and architecture for community projects; Delivered Git, GitHub, and Linux workshops introducing \textbf{150+} participants to command-line tooling and open-source development practices}
+
           \resumeItemListEnd
 
       \resumeProjectHeading
-          {\textbf{Open Source Contributor} $|$ \emph{Self-Driven}}{Aug. 2024 -- Present}
+          {\textbf{Open Source Contributor} $|$ \emph{Graphite, OpenWallet Foundation, OpenPrinting, Layer5io}}{Aug. 2024 -- Present}
           \resumeItemListStart
-            \resumeItem{Actively maintain and open-source personal projects, releasing developer tools and CLI applications to the public}
-            \resumeItem{Contributed to open-source organizations such as Graphite, OpenWallet Foundation, OpenPrinting, Layer5io}
+            \resumeItem{Contributed to open-source organizations with work spanning procedural 2D vector graphics, developer tooling, identity infrastructure, and Linux printing subsystems; maintained public CLI tools and backend libraries}
           \resumeItemListEnd
 
     \resumeSubHeadingListEnd
 
-\vspace{-15pt}
+\vspace{-10pt}
 
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
+%-----------TECHNICAL SKILLS-----------
+\section{\textbf{Technical Skills}}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Rust, Go, Python, Java, C, SQL (PostgreSQL), TypeScript} \\
-     \textbf{Backend \& Systems}{: Actix-web, Axum, Tokio, Tonic, Gin, FastAPI, Bubbletea, Django, Solana, Anchor Framework} \\
-     \textbf{DevOps \& Tools}{: Git, Docker, Docker Compose, GitHub Actions, Azure, Linux, Bash, Kubernetes}
+     \textbf{Languages}{: Rust, Golang, Java, Python, C, TypeScript, SQL (PostgreSQL)} \\
+     \textbf{Systems and Backend}{: Tokio, Axum, Actix-web, Tonic (gRPC), Gin, async runtimes, D-Bus (zbus), IPC, inotify} \\
+     \textbf{DevOps and Tools}{: Git, Docker, Docker Compose, GitHub Actions, Kubernetes, Azure, Bash, Linux}
     }}
  \end{itemize}
 
