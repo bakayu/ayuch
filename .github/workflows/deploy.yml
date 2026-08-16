@@ -28,13 +28,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-            submodules: recursive
-            fetch-depth: 0
+          submodules: recursive
+          fetch-depth: 0
 
       - name: Install Zola
         uses: taiki-e/install-action@v2
         with:
-          tool: zola
+          # NOTE: Pinned to 0.22.1 temporarily, revert
+          # when Tabi is compatible with tera-2
+          tool: zola@0.22.1
 
       - name: Build with Zola
         run: zola build
