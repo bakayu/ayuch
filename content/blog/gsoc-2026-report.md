@@ -61,7 +61,7 @@ graph TD
 App["Application<br/>(Flatpak / native)"]
 Portal["xdg-desktop-portal"]
 Cosmic["xdg-desktop-portal-cosmic<br/><i>the dialog lives here</i>"]
-Backend["cpdb-backend-cups,<br/>cpdb-backend-cups, …"]
+Backend["cpdb-backend-cups"]
 CUPS["CUPS"]
 
     App -->|"D-Bus:<br/>org.freedesktop.portal.Print"| Portal
