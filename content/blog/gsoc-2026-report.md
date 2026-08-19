@@ -281,6 +281,10 @@ $ gdbus call --session --timeout 9999 \
 
 Or, just press <kbd>Ctrl</kbd>+<kbd>P</kbd> in a Flatpak application. It has been tested working with Evince and gedit.
 
+A sneak peek at what the dialog looks like currently: (check the PR comments for a video demo)
+
+![cosmic-print-dialog-screenshot](/images/cosmic-print-dialog-screenshot.png)
+
 ## What's left to do
 
 **Review feedback on PR #331.** The review is active and I will be iterating on it. This is expected for a change of this size touching a shared component.
