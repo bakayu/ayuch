@@ -34,9 +34,7 @@ jobs:
       - name: Install Zola
         uses: taiki-e/install-action@v2
         with:
-          # NOTE: Pinned to 0.22.1 temporarily, revert
-          # when Tabi is compatible with tera-2
-          tool: zola@0.22.1
+          tool: zola
 
       - name: Build with Zola
         run: zola build
