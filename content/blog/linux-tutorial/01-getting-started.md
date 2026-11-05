@@ -32,8 +32,8 @@ invert_previous_next_article_links = true
 
 Welcome to Part 1 of the Linux Command-Line Workshop!
 
-{{admonition(type="warning", text="**Haven't set up your environment yet?** Go back to [Part 0: Setting Up Your Environment](/blog/linux-tutorial/00-setup) first!
-")}}
+{{< admonition type="warning" text="**Haven't set up your environment yet?** Go back to [Part 0: Setting Up Your Environment](/blog/linux-tutorial/00-setup) first!
+" />}}
 
 In this post, you'll learn the fundamental commands that every developer needs to navigate and manipulate files in the terminal.
 

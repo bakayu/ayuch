@@ -234,7 +234,7 @@ If you see `"Hello world! I have been called 1 times."` come back - congratulati
 
 **The `zvariant::Value` type is D-Bus's `Any`.** It appears in method signatures (like the `hints` parameter in the notification example) when the interface spec uses D-Bus variant types. It's ergonomic enough once you're used to it, but if you see type errors involving `Value`, that's where to look.
 
-{{ admonition(type="tip", icon="tip", title="Tip", text="**Go deeper:** This post covers the fundamentals, but zbus has a lot more to offer - signals, properties, async streams of property changes, `ObjectServer` for multi-object services, and more. The [official zbus book](https://z-galaxy.github.io/zbus/introduction.html) is excellent and covers all of it. Highly recommended reading once you have the basics working.") }}
+{{< admonition type="tip" icon="tip" title="Tip" text="**Go deeper:** This post covers the fundamentals, but zbus has a lot more to offer - signals, properties, async streams of property changes, `ObjectServer` for multi-object services, and more. The [official zbus book](https://z-galaxy.github.io/zbus/introduction.html) is excellent and covers all of it. Highly recommended reading once you have the basics working." />}}
  
 ## Closing
  

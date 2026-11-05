@@ -56,7 +56,7 @@ To explain the goal I need to introduce three things that had to be glued togeth
 
 So the shape of the project was clear: make COSMIC a good CPDB frontend, and expose that frontend through the print portal.
 
-{% mermaid() %}
+{% <mermaid> %}
 graph TD
 App["Application<br/>(Flatpak / native)"]
 Portal["xdg-desktop-portal"]
@@ -69,7 +69,7 @@ CUPS["CUPS"]
     Cosmic -->|"cpdb-rs<br/>D-Bus: org.openprinting.PrintBackend"| Backend
     Backend --> CUPS
 
-{% end %}
+{% </mermaid> %}
 
 ## Goals of the project
 

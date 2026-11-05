@@ -29,7 +29,7 @@ giscus = true
 
 ---
 
-{{ admonition(type="warning", title="Try First, Then Learn", text="These are complete solutions to all workshop challenges. Make sure you've attempted each challenge on your own before looking at the solutions. The learning happens in the struggle!") }}
+{{< admonition type="warning" title="Try First, Then Learn" text="These are complete solutions to all workshop challenges. Make sure you've attempted each challenge on your own before looking at the solutions. The learning happens in the struggle!" />}}
 
 ---
 
@@ -852,7 +852,7 @@ Completed the workshop? Share it!
 
 ---
 
-{{ admonition(type="tip", title="You're Now a Command-Line User!", text="You've graduated from beginner to capable terminal user. The terminal is no longer intimidating - it's your powerful tool. Keep practicing, keep customizing, and most importantly - have fun automating things!") }}
+{{< admonition type="tip" title="You're Now a Command-Line User!" text="You've graduated from beginner to capable terminal user. The terminal is no longer intimidating - it's your powerful tool. Keep practicing, keep customizing, and most importantly - have fun automating things!" />}}
 
 ---
 

@@ -56,7 +56,7 @@ For Raven's agents, client streaming is the natural fit. The agent would open a 
 
 I have written a small tutorial with rust and tonic (a gRPC implementation in Rust) to accomply this blog post, but before we write any code, we need to talk about the `.proto` file. This is what makes gRPC different from the start - you don't write code and hope both sides agree, you write a contract first and both the server and client generate their types from the `.proto` file at compile time. No guessing, no drifting, no runtime surprises.
 
-{{ admonition(type="info", icon="note", title="Note", text="Find the full code here -> [grpc-mouse](https://github.com/bakayu/rust-projects/tree/master/tonic/grpc-mouse)") }}
+{{< admonition type="info" icon="note" title="Note" text="Find the full code here -> [grpc-mouse](https://github.com/bakayu/rust-projects/tree/master/tonic/grpc-mouse)" />}}
 
 ### The Contract
 ```protobuf

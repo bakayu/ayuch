@@ -31,7 +31,7 @@ invert_previous_next_article_links = true
 
 Before we dive into the workshop, let's get your environment set up! This guide will walk you through installing everything you need, regardless of your operating system.
 
-{{ admonition(type="note", title="About Shell Compatibility", text="This tutorial is written for **Bash** (the most common Linux shell). If you're using **Zsh** (default on macOS Catalina+), don't worry—almost everything will work identically! The main differences you might notice are in advanced customization (`.zshrc` vs `.bashrc`), but we'll point those out when relevant.") }}
+{{< admonition type="note" title="About Shell Compatibility" text="This tutorial is written for **Bash** (the most common Linux shell). If you're using **Zsh** (default on macOS Catalina+), don't worry—almost everything will work identically! The main differences you might notice are in advanced customization (`.zshrc` vs `.bashrc`), but we'll point those out when relevant." />}}
 
 ## Windows Users: Installing WSL (Windows Subsystem for Linux)
 
@@ -44,7 +44,7 @@ WSL lets you run a full Linux environment directly on Windows. It's the best way
 
 ### Step 1: Enable WSL
 
-{{ admonition(type="info", text="WSL Ubuntu can be installed via the Microsoft store as well, but installing it via powershell is recommended.") }}
+{{< admonition type="info" text="WSL Ubuntu can be installed via the Microsoft store as well, but installing it via powershell is recommended." />}}
 
 Open **PowerShell** as Administrator (Right-click Start → Windows PowerShell (Admin)) and run:
 
@@ -151,11 +151,11 @@ echo 'eval "$(/usr/local/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/usr/local/bin/brew shellenv)"
 ```
 
-{{ admonition(type="tip", text="Not sure which Mac you have?
+{{< admonition type="tip" text="Not sure which Mac you have?
 
 Click the Apple Menu → About This Mac.
 
-If it says 'Chip: Apple M1/M2/M3/M4', you have Apple Silicon. If it says 'Processor: Intel', you have an Intel Mac.") }}
+If it says 'Chip: Apple M1/M2/M3/M4', you have Apple Silicon. If it says 'Processor: Intel', you have an Intel Mac." />}}
 
 Close and reopen Terminal for changes to take effect.
 

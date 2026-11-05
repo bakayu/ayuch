@@ -39,7 +39,7 @@ Instead of managing mutable UI nodes directly (like in GTK or Qt, where you hold
 
 Whenever the state changes in the `update` function, `iced` automatically calls `view` again, computes the difference, and redraws the UI.
 
-{% mermaid() %}
+{% <mermaid> %}
 graph TD
     State[State] -->|view| View[View]
     View -->|User Action / Event| Message[Message]
@@ -47,11 +47,11 @@ graph TD
     Update -->|Mutates State| State
     Update -.->|Task / Subscription| Async[Async Task / Stream]
     Async -.->|Yields| Message
-{% end %}
+{% </mermaid> %}
 
 This makes UI state management deterministic, testable, and incredibly satisfying.
 
-{{ admonition(type="info", icon="note", title="Note", text="**A cool note:** Since version 0.14, `iced` now supports reactive rendering by default: re-rendering only the elements whose state has been mutated. Instead of redrawing the entire window on every update, it performs selective updates to only redraw what has changed, drastically reducing CPU usage.") }}
+{{< admonition type="info" icon="note" title="Note" text="**A cool note:** Since version 0.14, `iced` now supports reactive rendering by default: re-rendering only the elements whose state has been mutated. Instead of redrawing the entire window on every update, it performs selective updates to only redraw what has changed, drastically reducing CPU usage." />}}
 
 ---
 
@@ -59,11 +59,11 @@ This makes UI state management deterministic, testable, and incredibly satisfyin
 
 To demonstrate this, we'll build a simple system monitor that queries CPU stats from `/proc/stat` and shows them using progress bars.
 
-{{ admonition(type="warning", icon="warning", title="Linux Only", text="Since this application reads metrics directly from `/proc/stat`, it will only work on Linux. If you are on Windows or macOS, you will need to adapt the metric-gathering code or run the app in WSL.") }}
+{{< admonition type="warning" icon="warning" title="Linux Only" text="Since this application reads metrics directly from `/proc/stat`, it will only work on Linux. If you are on Windows or macOS, you will need to adapt the metric-gathering code or run the app in WSL." />}}
 
 But hold on for a second, reading and parsing `/proc/stat` requires some OS-level work. Since this tutorial focuses on `iced` and subscriptions, I won't go deep into the parsing details here. I've written a module `cpu.rs` using the `procfs` crate that handles calculating the delta of CPU time ticks. (Find the code here: [link](https://github.com/bakayu/proc-iced/blob/master/src/cpu.rs))
 
-{{ admonition(type="info", icon="note", title="Note", text="If you want to learn more about how procfs works, I highly recommend checking out the [procfs crate documentation](https://docs.rs/procfs/latest/procfs/). For this tutorial, you can simply copy-paste the [cpu.rs](https://github.com/bakayu/proc-iced/blob/master/src/cpu.rs) module into your project and use the exposed endpoints.") }}
+{{< admonition type="info" icon="note" title="Note" text="If you want to learn more about how procfs works, I highly recommend checking out the [procfs crate documentation](https://docs.rs/procfs/latest/procfs/). For this tutorial, you can simply copy-paste the [cpu.rs](https://github.com/bakayu/proc-iced/blob/master/src/cpu.rs) module into your project and use the exposed endpoints." />}}
 
 Here is a quick overview of what the `cpu.rs` module exposes:
 
@@ -325,9 +325,9 @@ We now have a fully functioning, beautiful system monitor running entirely nativ
 
 ## Gotchas and Tips
 
-{{ admonition(type="warning", icon="warning", title="Blocking the Runtime", text="In Rust async programming, you must never block the executor. If you check `cpu.rs`, we read from `/proc/stat` which is a blocking file-system operation. If we read it directly in our async stream, it could starve the tokio runtime and cause UI lag. We resolved this by wrapping the call in `tokio::task::spawn_blocking`. Always do this for file system or CPU-intensive tasks.") }}
+{{< admonition type="warning" icon="warning" title="Blocking the Runtime" text="In Rust async programming, you must never block the executor. If you check `cpu.rs`, we read from `/proc/stat` which is a blocking file-system operation. If we read it directly in our async stream, it could starve the tokio runtime and cause UI lag. We resolved this by wrapping the call in `tokio::task::spawn_blocking`. Always do this for file system or CPU-intensive tasks." />}}
 
-{{ admonition(type="tip", icon="tip", title="State Persistence in Streams", text="`stream::unfold` is excellent for tracking state (like our `CpuSampler`) across yields. If you need a more advanced subscription (e.g. listening to a D-Bus signal or TCP socket where connections can drop), you can wrap your stream in a loop that reconnects and handles errors gracefully without crashing the subscription.") }}
+{{< admonition type="tip" icon="tip" title="State Persistence in Streams" text="`stream::unfold` is excellent for tracking state (like our `CpuSampler`) across yields. If you need a more advanced subscription (e.g. listening to a D-Bus signal or TCP socket where connections can drop), you can wrap your stream in a loop that reconnects and handles errors gracefully without crashing the subscription." />}}
 
 ## Closing
 
